@@ -3,187 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GMG Community | Roblox Gaming</title>
+  <title>GMG Team | Roblox Gaming Community</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <!-- Font Inter & Orbitron untuk kesan gaming futuristik -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Orbitron:wght@800;900&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; }
-    /* Pattern Latar Belakang Abstrak */
+    .font-gaming { font-family: 'Orbitron', sans-serif; }
+    /* Pattern Latar Belakang Abstrak & Gelap Grunge */
     .bg-abstract {
-      background-color: #050505;
+      background-color: #030303;
       background-image: 
-        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 10% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 40%);
     }
     .grid-pattern {
-      background-size: 30px 30px;
+      background-size: 40px 40px;
       background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
     }
   </style>
 </head>
-<body class="bg-abstract grid-pattern text-zinc-100 min-h-screen flex flex-col justify-between">
+<body class="bg-abstract grid-pattern text-zinc-300 min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
 
   <!-- Navbar / Header -->
-  <header class="border-b border-zinc-800/80 backdrop-blur-md sticky top-0 z-50 bg-black/60">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Logo GMG Abstrak -->
+  <header class="border-b border-zinc-900/80 backdrop-blur-md sticky top-0 z-50 bg-black/80">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+      <!-- Logo GMG yang Baru -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 bg-white text-black font-black text-xl flex items-center justify-center rounded-none transform group-hover:rotate-6 transition-transform duration-300 border-2 border-white shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-          GMG
+        <img src="https://images.squarespace-cdn.com/content/v1/5f8ef9fe7b79d84ca3b3fa58/d32f5d54-1521-4fa3-b6d3-2e212457fb1e/image_0.png" alt="GMG Team Logo" class="w-12 h-12 md:w-14 md:h-14 object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.2)] group-hover:scale-105 transition-transform duration-300">
+        <div class="flex flex-col">
+          <span class="font-gaming font-black text-lg md:text-xl text-white tracking-widest leading-none">GMG TEAM</span>
+          <span class="text-[9px] md:text-[10px] tracking-[0.2em] text-zinc-500 font-bold uppercase mt-1">Roblox Community</span>
         </div>
-        <span class="font-bold text-lg tracking-widest text-white uppercase hidden sm:inline">ROBLOX COMMUNITY</span>
       </a>
 
       <!-- Navigation Links -->
-      <nav class="flex items-center gap-6 text-sm font-semibold tracking-wide">
-        <a href="#galeri" class="text-zinc-400 hover:text-white transition-colors">Galeri</a>
-        <a href="#karya" class="text-zinc-400 hover:text-white transition-colors">Karya</a>
-        <a href="#sosmed" class="text-zinc-400 hover:text-white transition-colors">Sosmed</a>
+      <nav class="flex items-center gap-5 text-xs md:text-sm font-bold tracking-wider uppercase">
+        <a href="#galeri" class="text-zinc-400 hover:text-white transition-colors">// Galeri</a>
+        <a href="#karya" class="text-zinc-400 hover:text-white transition-colors">// Karya</a>
+        <a href="#sosmed" class="text-zinc-400 hover:text-white transition-colors">// Sosmed</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center relative">
-    <div class="inline-block px-4 py-1.5 mb-6 text-xs font-mono font-semibold tracking-wider text-black bg-white rounded-none uppercase shadow-lg">
-      Roblox Gaming Clan & Community
+  <section class="max-w-5xl mx-auto px-6 pt-24 pb-20 text-center relative">
+    <!-- Ornamen Abstrak Atas -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-zinc-500 to-transparent opacity-30"></div>
+    
+    <!-- Logo besar di tengah hero -->
+    <div class="inline-block mb-8 relative group">
+      <div class="absolute -inset-1 bg-gradient-to-r from-white/10 to-zinc-500/10 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+      <img src="https://images.squarespace-cdn.com/content/v1/5f8ef9fe7b79d84ca3b3fa58/d32f5d54-1521-4fa3-b6d3-2e212457fb1e/image_0.png" alt="GMG Team Big Logo" class="w-32 h-32 md:w-44 md:h-44 mx-auto object-contain filter drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+    </div>
+
+    <div class="inline-block px-4 py-1.5 mb-6 text-[10px] md:text-xs font-mono font-extrabold tracking-widest text-black bg-white uppercase shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+      ROBLOX GAMING CLAN & COMMUNITY
     </div>
     
-    <h1 class="text-5xl md:text-7xl font-black text-white uppercase tracking-tight mb-6 leading-none">
-      WELCOME TO <span class="bg-gradient-to-r from-white via-zinc-400 to-zinc-600 bg-clip-text text-transparent">GMG COMMUNITY</span>
+    <h1 class="font-gaming text-4xl md:text-6xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-6 leading-none">
+      WELCOME TO THE <br class="hidden md:inline"><span class="bg-gradient-to-b from-white via-zinc-200 to-zinc-600 bg-clip-text text-transparent">GMG TEAM</span>
     </h1>
     
-    <p class="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-      Komunitas Roblox tempat berkumpulnya para gamer, creator, dan builder. Bermain bersama, ciptakan karya, dan tingkatkan skill dalam ekosistem bernuansa abstrak & elegan.
+    <p class="text-zinc-500 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
+      Komunitas Roblox tempat berkumpulnya para gamer, creator, dan builder handal. Bermain bersama, ciptakan karya, dan jalin persaudaraan dalam ekosistem gelap dan abstrak.
     </p>
 
     <!-- Call to Action Buttons -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-      <a href="https://discord.com" target="_blank" class="w-full sm:w-auto px-8 py-3.5 bg-white text-black font-bold text-sm tracking-wider uppercase hover:bg-zinc-200 transition-all border border-white shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-        Join Discord GMG
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-sm mx-auto sm:max-w-none">
+      <a href="https://discord.com" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-200 transition-all border border-white shadow-[0_0_25px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2">
+        <span class="font-gaming">JOIN DISCORD</span>
       </a>
-      <a href="https://tiktok.com" target="_blank" class="w-full sm:w-auto px-8 py-3.5 bg-black text-white font-bold text-sm tracking-wider uppercase hover:bg-zinc-900 transition-all border border-zinc-700">
-        Follow TikTok
+      <a href="https://tiktok.com" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-black text-white font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-900 transition-all border border-zinc-800 flex items-center justify-center gap-2">
+        <span class="font-gaming">FOLLOW TIKTOK</span>
       </a>
     </div>
   </section>
 
   <!-- Section Galeri Foto -->
-  <section id="galeri" class="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-900">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+  <section id="galeri" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900/60">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
       <div>
-        <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">// MEDIA & MOMENT</h2>
-        <h3 class="text-3xl font-black text-white uppercase tracking-tight">Galeri Komunitas</h3>
+        <h2 class="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.25em] mb-2">// MEDIA & MOMENTS</h2>
+        <h3 class="font-gaming text-3xl font-black text-white uppercase tracking-tight">GALERI KOMUNITAS</h3>
       </div>
-      <p class="text-zinc-400 text-sm max-w-md">Momen kebersamaan mabar (main bareng), event, dan kompetisi internal GMG Roblox.</p>
+      <p class="text-zinc-500 text-xs md:text-sm max-w-md">Kumpulan tangkapan layar, keseruan main bareng (mabar), serta event-event seru dari keluarga besar GMG Team.</p>
     </div>
 
-    <!-- Grid Foto Abstrak Monochrome -->
+    <!-- Grid Foto Monochrome Abstrak -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="group relative overflow-hidden bg-zinc-900 border border-zinc-800 aspect-video">
-        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Mabar Roblox" class="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+      <!-- Item Galeri 1 -->
+      <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Roblox Event" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 group-hover:scale-105 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
         <div class="absolute bottom-4 left-4">
-          <p class="text-xs font-mono text-zinc-400">EVENT #01</p>
-          <p class="text-sm font-bold text-white uppercase">Mabar Roblox Squad GMG</p>
+          <p class="text-[10px] font-mono text-zinc-500">EVENT #01</p>
+          <p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">SQUAD ROBLOX MABAR</p>
         </div>
       </div>
 
-      <div class="group relative overflow-hidden bg-zinc-900 border border-zinc-800 aspect-video">
-        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Roblox Tournament" class="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+      <!-- Item Galeri 2 -->
+      <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Gaming Tournament" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 group-hover:scale-105 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
         <div class="absolute bottom-4 left-4">
-          <p class="text-xs font-mono text-zinc-400">TOURNAMENT</p>
-          <p class="text-sm font-bold text-white uppercase">GMG Championship Night</p>
+          <p class="text-[10px] font-mono text-zinc-500">COMPETITION</p>
+          <p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">INTERNAL TOURNAMENT</p>
         </div>
       </div>
 
-      <div class="group relative overflow-hidden bg-zinc-900 border border-zinc-800 aspect-video">
-        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80" alt="Gathering GMG" class="w-full h-full object-cover grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+      <!-- Item Galeri 3 -->
+      <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
+        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80" alt="GMG Meetup Voice" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 group-hover:scale-105 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
         <div class="absolute bottom-4 left-4">
-          <p class="text-xs font-mono text-zinc-400">MEETUP</p>
-          <p class="text-sm font-bold text-white uppercase">Voice Chat Hangout</p>
+          <p class="text-[10px] font-mono text-zinc-500">GATHERING</p>
+          <p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">VOICE CHAT & HANGOUT</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Section Daftar Karya -->
-  <section id="karya" class="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-900">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+  <section id="karya" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900/60">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
       <div>
-        <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">// CREATION & MAPS</h2>
-        <h3 class="text-3xl font-black text-white uppercase tracking-tight">Daftar Karya GMG</h3>
+        <h2 class="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.25em] mb-2">// CREATIVITY & PRODUCTIONS</h2>
+        <h3 class="font-gaming text-3xl font-black text-white uppercase tracking-tight">DAFTAR KARYA GMG</h3>
       </div>
-      <p class="text-zinc-400 text-sm max-w-md">Koleksi map Roblox, outfit, serta desain unik yang dibuat oleh member komunitas GMG.</p>
+      <p class="text-zinc-500 text-xs md:text-sm max-w-md">Kumpulan map, aksesoris avatar, outfit Roblox, dan maha karya digital yang diciptakan oleh para creator bertalenta di GMG Team.</p>
     </div>
 
     <!-- Cards Karya -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Karya 1 -->
-      <div class="p-6 bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-colors">
+      <div class="p-6 bg-zinc-950/40 border border-zinc-900 hover:border-zinc-500 transition-all duration-300 relative group">
+        <div class="absolute top-0 right-0 w-8 h-[1px] bg-white opacity-20"></div>
+        <div class="absolute top-0 right-0 h-8 w-[1px] bg-white opacity-20"></div>
         <div class="flex justify-between items-start mb-4">
-          <span class="text-xs font-mono px-2 py-1 bg-zinc-900 text-zinc-300 border border-zinc-700">ROBLOX MAP</span>
-          <span class="text-xs text-zinc-500 font-mono">2026</span>
+          <span class="text-[9px] font-mono px-2 py-0.5 bg-zinc-900 text-zinc-400 border border-zinc-800">ROBLOX PLACE / MAP</span>
+          <span class="text-[10px] text-zinc-600 font-mono">01 // CREATED</span>
         </div>
-        <h4 class="text-xl font-bold text-white mb-2 uppercase">GMG Abstract World</h4>
-        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Map Roblox bernuansa cyberpunk monochrome buatan builder GMG dengan obstacle obby unik & fitur hangout tempat bersantai member.</p>
-        <a href="#" class="inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider hover:underline">
-          Play On Roblox &rarr;
+        <h4 class="font-gaming text-lg font-bold text-white mb-2 uppercase tracking-wide">GMG DISTRICT // ABSTRACT WORLD</h4>
+        <p class="text-zinc-500 text-xs md:text-sm mb-6 leading-relaxed">Map hangout dan mabar resmi dengan estetika cyber-abstract. Dipenuhi dengan arena obby menantang, tempat pamer avatar, dan spot nongkrong yang dikelilingi karya seni komunitas.</p>
+        <a href="#" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors">
+          PLAY ON ROBLOX &rarr;
         </a>
       </div>
 
       <!-- Karya 2 -->
-      <div class="p-6 bg-zinc-950 border border-zinc-800 hover:border-zinc-500 transition-colors">
+      <div class="p-6 bg-zinc-950/40 border border-zinc-900 hover:border-zinc-500 transition-all duration-300 relative group">
+        <div class="absolute top-0 right-0 w-8 h-[1px] bg-white opacity-20"></div>
+        <div class="absolute top-0 right-0 h-8 w-[1px] bg-white opacity-20"></div>
         <div class="flex justify-between items-start mb-4">
-          <span class="text-xs font-mono px-2 py-1 bg-zinc-900 text-zinc-300 border border-zinc-700">CLOTHING & AVATAR</span>
-          <span class="text-xs text-zinc-500 font-mono">2026</span>
+          <span class="text-[9px] font-mono px-2 py-0.5 bg-zinc-900 text-zinc-400 border border-zinc-800">CLOTHING & MERCH</span>
+          <span class="text-[10px] text-zinc-600 font-mono">02 // CREATED</span>
         </div>
-        <h4 class="text-xl font-bold text-white mb-2 uppercase">Official GMG Merch Outfit</h4>
-        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">Desain baju dan celana Roblox resmi bertema hitam-putih abstrak yang dirancang khusus untuk seluruh anggota komunitas GMG.</p>
-        <a href="#" class="inline-flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider hover:underline">
-          View In Catalog &rarr;
+        <h4 class="font-gaming text-lg font-bold text-white mb-2 uppercase tracking-wide">GMG TEAM OFF-GRID OUTFIT</h4>
+        <p class="text-zinc-500 text-xs md:text-sm mb-6 leading-relaxed">Merchandise virtual resmi dari GMG Team di katalog Roblox. Mengusung gaya busana hitam-putih abstrak, lengkap dengan kaos, jaket, dan celana dengan logo "GMG Team" yang khas.</p>
+        <a href="#" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors">
+          CATALOG STORE &rarr;
         </a>
       </div>
     </div>
   </section>
 
   <!-- Section Media Sosial -->
-  <section id="sosmed" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900 text-center">
-    <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-2">// CONNECT WITH US</h2>
-    <h3 class="text-3xl font-black text-white uppercase tracking-tight mb-8">Bergabunglah Bersama GMG</h3>
+  <section id="sosmed" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900/60 text-center relative">
+    <h2 class="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.25em] mb-2">// SOCIAL MEDIA CONNECT</h2>
+    <h3 class="font-gaming text-3xl font-black text-white uppercase tracking-tight mb-4">GABUNG BERSAMA KAMI</h3>
+    <p class="text-zinc-500 text-xs md:text-sm max-w-sm mx-auto mb-10">Dapatkan informasi terkini, berpartisipasi dalam event, dan berteman dengan ratusan member aktif lainnya.</p>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
       <!-- Discord Card -->
-      <a href="https://discord.com" target="_blank" class="p-8 bg-zinc-950 border border-zinc-800 hover:bg-zinc-900 hover:border-white transition-all group text-left">
-        <div class="w-10 h-10 bg-white text-black font-black flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <a href="https://discord.com" target="_blank" class="p-8 bg-zinc-950/30 border border-zinc-900 hover:border-white transition-all duration-300 group text-left relative">
+        <div class="absolute bottom-0 right-0 w-4 h-[1px] bg-white/20"></div>
+        <div class="absolute bottom-0 right-0 h-4 w-[1px] bg-white/20"></div>
+        <div class="w-12 h-12 bg-white text-black font-gaming font-black text-lg flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300">
           DC
         </div>
-        <h4 class="text-lg font-bold text-white uppercase mb-1">Discord Server</h4>
-        <p class="text-xs text-zinc-400">Tempat ngobrol, voice chat mabar, dan update info event terbaru GMG.</p>
+        <h4 class="font-gaming text-lg font-bold text-white uppercase mb-1.5 tracking-wide">DISCORD SERVER</h4>
+        <p class="text-xs text-zinc-500 leading-relaxed font-medium">Tempat koordinasi, mabar, suara (voice chat), dan pusat event kompetisi online GMG Team.</p>
       </a>
 
       <!-- TikTok Card -->
-      <a href="https://tiktok.com" target="_blank" class="p-8 bg-zinc-950 border border-zinc-800 hover:bg-zinc-900 hover:border-white transition-all group text-left">
-        <div class="w-10 h-10 bg-white text-black font-black flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <a href="https://tiktok.com" target="_blank" class="p-8 bg-zinc-950/30 border border-zinc-900 hover:border-white transition-all duration-300 group text-left relative">
+        <div class="absolute bottom-0 right-0 w-4 h-[1px] bg-white/20"></div>
+        <div class="absolute bottom-0 right-0 h-4 w-[1px] bg-white/20"></div>
+        <div class="w-12 h-12 bg-white text-black font-gaming font-black text-lg flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300">
           TT
         </div>
-        <h4 class="text-lg font-bold text-white uppercase mb-1">TikTok Official</h4>
-        <p class="text-xs text-zinc-400">Konten higlight mabar, video lucu Roblox, dan cuplikan event GMG.</p>
+        <h4 class="font-gaming text-lg font-bold text-white uppercase mb-1.5 tracking-wide">TIKTOK OFFICIAL</h4>
+        <p class="text-xs text-zinc-500 leading-relaxed font-medium">Tempat membagikan momen-momen seru mabar, highlight, gameplay, dan video kreatif GMG Team.</p>
       </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t border-zinc-900 py-8 bg-black/80">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-zinc-500 font-mono">
-      <p>&copy; 2026 GMG ROBLOX COMMUNITY. ALL RIGHTS RESERVED.</p>
-      <p>BUILT FOR GAMERS & CREATORS</p>
+  <footer class="border-t border-zinc-950 bg-black/80 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-zinc-600 font-mono tracking-wider">
+      <div class="flex items-center gap-3">
+        <img src="https://images.squarespace-cdn.com/content/v1/5f8ef9fe7b79d84ca3b3fa58/d32f5d54-1521-4fa3-b6d3-2e212457fb1e/image_0.png" alt="GMG Logo Tiny" class="w-6 h-6 object-contain filter grayscale opacity-40">
+        <p>&copy; 2026 GMG TEAM ROBLOX. ALL RIGHTS RESERVED.</p>
+      </div>
+      <p>ESTABLISHED // FOR GAMERS & CREATORS</p>
     </div>
   </footer>
 
