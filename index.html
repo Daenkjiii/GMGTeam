@@ -88,10 +88,12 @@
         <span>ROBLOX GAMING & COMMUNITY</span>
       </div>
     </div>
-   <h1 class="font-gaming text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mb-6 leading-tight w-full text-center">
-  GOKIL MANA GOKIL <br>
-  <span class="bg-gradient-to-b from-white via-zinc-200 to-zinc-600 bg-clip-text text-transparent">TEAM</span>
-</h1>
+
+    <!-- Judul Utama Simetris -->
+    <h1 class="font-gaming text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mb-6 leading-tight w-full text-center">
+      GOKIL MANA GOKIL <br>
+      <span class="bg-gradient-to-b from-white via-zinc-200 to-zinc-600 bg-clip-text text-transparent">TEAM</span>
+    </h1>
     
     <p class="text-zinc-400 text-xs md:text-sm max-w-2xl mx-auto mb-10 leading-relaxed font-medium px-4">
       Selamat datang di ranah GMG Team—ekosistem Roblox tempat kreativitas tanpa batas, koleksi outfit kustom eksklusif, dan solidaritas main bareng menyatu. Kami memanggil kamu untuk menjadi bagian dari keluarga besar kami! Bergabunglah sekarang, tunjukkan karakter unikmu, dan raih kesempatan memenangkan undian berhadiah setiap minggu.
@@ -118,7 +120,7 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <!-- Foto 1 -->
+      <!-- Foto 1 (HANGOUT SLIDER) -->
       <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
         <div id="gallerySlider" class="slider-snap flex w-full h-full overflow-x-auto">
           <div class="slider-snap-item w-full h-full flex-shrink-0">
@@ -138,17 +140,27 @@
         </div>
       </div>
 
-      <!-- Foto 2 -->
+      <!-- Foto 2 (EVENT SLIDER) -->
       <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
-        <img src="foto2.jpg" alt="Tournament" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 group-hover:scale-105 transition-all duration-500">
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-        <div class="absolute bottom-4 left-4">
+        <div id="eventSlider" class="slider-snap flex w-full h-full overflow-x-auto">
+          <div class="slider-snap-item w-full h-full flex-shrink-0">
+            <img src="foto2.jpg" alt="Event 1" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500">
+          </div>
+          <div class="slider-snap-item w-full h-full flex-shrink-0">
+            <img src="foto2_2.jpg" alt="Event 2" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto2.jpg'">
+          </div>
+          <div class="slider-snap-item w-full h-full flex-shrink-0">
+            <img src="foto2_3.jpg" alt="Event 3" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto2.jpg'">
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
+        <div class="absolute bottom-4 left-4 z-10 pointer-events-none">
           <p class="text-[10px] font-mono text-zinc-500">EVENT</p>
-          <p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">INSOMIGHT</p>
+          <p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">GMGTEAM</p>
         </div>
       </div>
 
-      <!-- Foto 3 -->
+      <!-- Foto 3 (COLLAB SLIDER) -->
       <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
         <div id="collabSlider" class="slider-snap flex w-full h-full overflow-x-auto">
           <div class="slider-snap-item w-full h-full flex-shrink-0">
@@ -284,7 +296,7 @@
             <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">24</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
             <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">25</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
 
-            <!-- 26 - 29 Available Hijau -->
+            <!-- 26 Booked & 27-29 Available Hijau -->
             <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">26</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
             <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">27</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
             <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">28</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
@@ -296,7 +308,7 @@
           </div>
         </div>
 
-        <!-- SLIDE 2: NOVEMBER 2026 (Semua Weekday Available Hijau, Weekend Putih) -->
+        <!-- SLIDE 2: NOVEMBER 2026 -->
         <div class="slider-snap-item w-full flex-shrink-0">
           <h4 class="font-gaming text-xl font-bold text-white uppercase tracking-wider mb-4">NOVEMBER 2026</h4>
 
@@ -558,9 +570,11 @@
       slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
     }
 
+    // Inisialisasi Otomatis Slider Galeri
     initAutoSlider('gallerySlider', 5000);
+    initAutoSlider('eventSlider', 5000);
     initAutoSlider('collabSlider', 5000);
   </script>
 
 </body>
-          </html>
+</html>
