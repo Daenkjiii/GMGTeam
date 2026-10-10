@@ -73,8 +73,6 @@
 
   <!-- Hero Section -->
   <section class="max-w-5xl mx-auto px-6 pt-12 pb-20 text-center flex flex-col items-center justify-center relative">
-    
-    <!-- Logo Utama -->
     <div class="w-full flex justify-center items-center mb-6">
       <div class="relative flex justify-center items-center">
         <div class="absolute inset-0 bg-white/5 rounded-full blur-3xl transform scale-125"></div>
@@ -82,7 +80,6 @@
       </div>
     </div>
 
-    <!-- Badge Roblox -->
     <div class="flex justify-center w-full mb-6">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 text-[10px] md:text-xs font-mono font-extrabold tracking-widest text-black bg-white uppercase shadow-[0_0_15px_rgba(255,255,255,0.15)]">
         <svg class="w-3.5 h-3.5 fill-black" viewBox="0 0 24 24">
@@ -92,17 +89,14 @@
       </div>
     </div>
     
-    <!-- Judul Utama -->
     <h1 class="font-gaming text-4xl sm:text-6xl md:text-7xl font-black text-white uppercase tracking-tighter mb-6 leading-none w-full">
       WELCOME TO <br><span class="bg-gradient-to-b from-white via-zinc-200 to-zinc-600 bg-clip-text text-transparent">GMG TEAM</span>
     </h1>
     
-    <!-- Deskripsi -->
     <p class="text-zinc-400 text-xs md:text-sm max-w-2xl mx-auto mb-10 leading-relaxed font-medium px-4">
       Selamat datang di ranah GMG Team. Sebuah ekosistem Roblox yang menggabungkan kreativitas tanpa batas, koleksi outfit kustom eksklusif, dan keseruan main bareng dalam nuansa gelap dan abstrak. Tunjukkan gaya unikmu bersama kami.
     </p>
 
-    <!-- Call to Action Buttons -->
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-sm mx-auto sm:max-w-none">
       <a href="https://discord.gg/u7vfwQmcB6" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-200 transition-all border border-white shadow-[0_0_25px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 font-gaming">
         <span>JOIN DISCORD</span>
@@ -123,10 +117,8 @@
       <p class="text-zinc-500 text-xs md:text-sm max-w-md">Kumpulan keseruan main bareng (mabar), serta event-event seru dari keluarga besar GMG Team.</p>
     </div>
 
-    <!-- Grid Foto Monochrome Abstrak -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      
-      <!-- Foto 1 (HANG OUT SLIDER) -->
+      <!-- Foto 1 -->
       <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
         <div id="gallerySlider" class="slider-snap flex w-full h-full overflow-x-auto">
           <div class="slider-snap-item w-full h-full flex-shrink-0">
@@ -139,7 +131,6 @@
             <img src="foto1_3.jpg" alt="Hangout 3" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto1.jpg'">
           </div>
         </div>
-
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-4 left-4 z-10 pointer-events-none">
           <p class="text-[10px] font-mono text-zinc-500">MEMORY</p>
@@ -147,7 +138,7 @@
         </div>
       </div>
 
-      <!-- Foto 2 (INSOMIGHT) -->
+      <!-- Foto 2 -->
       <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
         <img src="foto2.jpg" alt="Tournament" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 group-hover:scale-105 transition-all duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
@@ -157,7 +148,7 @@
         </div>
       </div>
 
-      <!-- Foto 3 (COLLAB INVITATION - SLIDER 5 FOTO) -->
+      <!-- Foto 3 -->
       <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
         <div id="collabSlider" class="slider-snap flex w-full h-full overflow-x-auto">
           <div class="slider-snap-item w-full h-full flex-shrink-0">
@@ -176,18 +167,16 @@
             <img src="foto3_5.jpg" alt="Collab 5" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto3.jpg'">
           </div>
         </div>
-
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
         <div class="absolute bottom-4 left-4 z-10 pointer-events-none">
           <p class="text-[10px] font-mono text-zinc-500">COLLAB</p>
           <p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">INVITATION</p>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Section Kalender Status Invitation & Event -->
+  <!-- Section Kalender Status Invitation & Event (Dengan Slider Bulan) -->
   <section id="kalender" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900/60">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
       <div>
@@ -199,7 +188,6 @@
 
     <!-- Kotak Panduan Warna (Legend Panel) -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 font-mono text-xs">
-      <!-- Legend 1: Booked -->
       <div class="p-4 bg-red-950/20 border border-red-900/60 flex items-start gap-3">
         <span class="w-3.5 h-3.5 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)] mt-0.5 flex-shrink-0"></span>
         <div>
@@ -208,7 +196,6 @@
         </div>
       </div>
 
-      <!-- Legend 2: Available (Diubah ke Warna Hijau) -->
       <div class="p-4 bg-emerald-950/20 border border-emerald-900/60 flex items-start gap-3">
         <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-0.5 flex-shrink-0"></span>
         <div>
@@ -217,7 +204,6 @@
         </div>
       </div>
 
-      <!-- Legend 3: Weekend Event -->
       <div class="p-4 bg-zinc-900 border border-white/40 flex items-start gap-3">
         <span class="w-3.5 h-3.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] mt-0.5 flex-shrink-0"></span>
         <div>
@@ -227,181 +213,155 @@
       </div>
     </div>
 
-    <!-- Container Kalender -->
-    <div class="bg-zinc-950/60 border border-zinc-900 p-6 md:p-8">
+    <!-- Container Kalender dengan Carousel/Slider -->
+    <div class="bg-zinc-950/60 border border-zinc-900 p-6 md:p-8 relative">
       
-      <!-- Header Bulan -->
+      <!-- Controls / Navigasi Bulan -->
       <div class="flex items-center justify-between mb-6 pb-4 border-b border-zinc-900">
         <div class="flex items-center gap-3">
           <span class="w-3 h-3 bg-white inline-block"></span>
-          <h4 class="font-gaming text-xl font-bold text-white uppercase tracking-wider">OKTOBER 2026</h4>
-        </div>
-        <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">[ JADWAL REAL-TIME ]</span>
-      </div>
-
-      <!-- Grid Hari dalam Seminggu -->
-      <div class="grid grid-cols-7 gap-2 text-center text-[10px] font-mono text-zinc-500 font-bold uppercase mb-3">
-        <div>SEN</div>
-        <div>SEL</div>
-        <div>RAB</div>
-        <div>KAM</div>
-        <div>JUM</div>
-        <div class="text-white">SAB</div>
-        <div class="text-white">MIN</div>
-      </div>
-
-      <!-- Grid Tanggal Bulan Oktober 2026 -->
-      <div class="grid grid-cols-7 gap-2 text-xs font-mono">
-        <!-- Tanggal Kosong Bulan Lalu -->
-        <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">28</div>
-        <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">29</div>
-        <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">30</div>
-
-        <!-- 01 KAMIS & 02 JUMAT (Booked) -->
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">01</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">02</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+          <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">[ JADWAL REAL-TIME ]</span>
         </div>
         
-        <!-- 03 SABTU & 04 MINGGU (Special Event) -->
-        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
-          <span class="font-bold">03</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        <!-- Tombol Navigasi Slider Kalender -->
+        <div class="flex items-center gap-2 font-gaming text-xs">
+          <button onclick="prevMonth()" class="px-3 py-1 bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-800 transition-colors cursor-pointer">&larr; PREV</button>
+          <button onclick="nextMonth()" class="px-3 py-1 bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-800 transition-colors cursor-pointer">NEXT &rarr;</button>
         </div>
-        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
-          <span class="font-bold">04</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+      </div>
+
+      <!-- Slider Container untuk Kalender -->
+      <div id="calendarSlider" class="slider-snap flex w-full overflow-x-auto gap-8">
+        
+        <!-- SLIDE 1: OKTOBER 2026 -->
+        <div class="slider-snap-item w-full flex-shrink-0">
+          <h4 class="font-gaming text-xl font-bold text-white uppercase tracking-wider mb-4">OKTOBER 2026</h4>
+
+          <div class="grid grid-cols-7 gap-2 text-center text-[10px] font-mono text-zinc-500 font-bold uppercase mb-3">
+            <div>SEN</div><div>SEL</div><div>RAB</div><div>KAM</div><div>JUM</div>
+            <div class="text-white">SAB</div><div class="text-white">MIN</div>
+          </div>
+
+          <div class="grid grid-cols-7 gap-2 text-xs font-mono">
+            <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">28</div>
+            <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">29</div>
+            <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">30</div>
+
+            <!-- 01 & 02 Booked -->
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">01</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">02</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <!-- 03 & 04 Weekend -->
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">03</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">04</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+
+            <!-- 05 - 09 Booked -->
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">05</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">06</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">07</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">08</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">09</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <!-- 10 & 11 Weekend -->
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">10</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">11</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+
+            <!-- 12 - 16 Booked -->
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">12</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">13</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">14</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">15</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">16</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <!-- 17 & 18 Weekend -->
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">17</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">18</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+
+            <!-- 19 - 23 Booked -->
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">19</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">20</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">21</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">22</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">23</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <!-- 24 & 25 Weekend -->
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">24</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">25</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+
+            <!-- 26 - 29 Available Hijau -->
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">26</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">27</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">28</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">29</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+
+            <!-- 30 Booked & 31 Weekend -->
+            <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">30</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span></div>
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">31</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+          </div>
         </div>
 
-        <!-- 05–09 SENIN-JUMAT (Booked) -->
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">05</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">06</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">07</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">08</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">09</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        <!-- SLIDE 2: NOVEMBER 2026 (Semua Weekday Available Hijau, Weekend Putih) -->
+        <div class="slider-snap-item w-full flex-shrink-0">
+          <h4 class="font-gaming text-xl font-bold text-white uppercase tracking-wider mb-4">NOVEMBER 2026</h4>
+
+          <div class="grid grid-cols-7 gap-2 text-center text-[10px] font-mono text-zinc-500 font-bold uppercase mb-3">
+            <div>SEN</div><div>SEL</div><div>RAB</div><div>KAM</div><div>JUM</div>
+            <div class="text-white">SAB</div><div class="text-white">MIN</div>
+          </div>
+
+          <div class="grid grid-cols-7 gap-2 text-xs font-mono">
+            <!-- Offset awal bulan November 2026 (1 Nov jatuh di hari Minggu) -->
+            <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">26</div>
+            <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">27</div>
+            <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">28</div>
+            <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">29</div>
+            <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">30</div>
+            <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">31</div>
+
+            <!-- 01 MINGGU (Special Event Putih) -->
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">01</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+
+            <!-- 02-06 SENIN-JUMAT (Available Hijau) -->
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">02</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">03</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">04</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">05</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">06</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <!-- 07 & 08 Weekend -->
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">07</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">08</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+
+            <!-- 09-13 SENIN-JUMAT (Available Hijau) -->
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">09</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">10</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">11</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">12</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">13</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <!-- 14 & 15 Weekend -->
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">14</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">15</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+
+            <!-- 16-20 SENIN-JUMAT (Available Hijau) -->
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">16</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">17</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">18</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">19</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">20</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <!-- 21 & 22 Weekend -->
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">21</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">22</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+
+            <!-- 23-27 SENIN-JUMAT (Available Hijau) -->
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">23</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">24</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">25</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">26</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">27</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+            <!-- 28 & 29 Weekend -->
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">28</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+            <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">29</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+
+            <!-- 30 SENIN (Available Hijau) -->
+            <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative"><span class="font-bold">30</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span></div>
+          </div>
         </div>
 
-        <!-- 10 SABTU & 11 MINGGU (Special Event) -->
-        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
-          <span class="font-bold">10</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
-        </div>
-        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
-          <span class="font-bold">11</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
-        </div>
-
-        <!-- 12–16 SENIN-JUMAT (Booked) -->
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">12</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">13</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">14</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">15</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">16</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-
-        <!-- 17 SABTU & 18 MINGGU (Special Event) -->
-        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
-          <span class="font-bold">17</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
-        </div>
-        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
-          <span class="font-bold">18</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
-        </div>
-
-        <!-- 19–23 SENIN-JUMAT (Booked) -->
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">19</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">20</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">21</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">22</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">23</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-
-        <!-- 24 SABTU & 25 MINGGU (Special Event) -->
-        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
-          <span class="font-bold">24</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
-        </div>
-        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
-          <span class="font-bold">25</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
-        </div>
-
-        <!-- 26–29 SENIN-KAMIS (Available / Keepable - Warna Hijau) -->
-        <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative">
-          <span class="font-bold">26</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span>
-        </div>
-        <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative">
-          <span class="font-bold">27</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span>
-        </div>
-        <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative">
-          <span class="font-bold">28</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span>
-        </div>
-        <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 hover:border-emerald-500 transition-colors cursor-pointer relative">
-          <span class="font-bold">29</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,1)]"></span>
-        </div>
-
-        <!-- 30 JUMAT (Booked) -->
-        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
-          <span class="font-bold">30</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
-        </div>
-
-        <!-- 31 SABTU (Special Event) -->
-        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
-          <span class="font-bold">31</span>
-          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
-        </div>
       </div>
 
       <!-- Tombol Keep Schedule CTA -->
@@ -425,16 +385,13 @@
       <p class="text-zinc-500 text-xs md:text-sm max-w-md">Kumpulan map, aksesoris avatar, outfit Roblox, dan maha karya digital yang diciptakan oleh para creator bertalenta di GMG Team.</p>
     </div>
 
-    <!-- Cards Karya -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Karya 1: Roblox Place / Map -->
+      <!-- Karya 1: Map -->
       <div class="p-6 bg-zinc-950/40 border border-zinc-900 hover:border-zinc-500 transition-all duration-300 relative group flex flex-col justify-between">
         <div>
-          <!-- Foto Preview Map -->
           <div class="w-full aspect-video bg-zinc-900 border border-zinc-800 mb-5 overflow-hidden relative">
             <img src="map.png" alt="GMG District World Map" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onError="this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80'">
           </div>
-
           <div class="flex justify-between items-start mb-4">
             <span class="text-[9px] font-mono px-2 py-0.5 bg-zinc-900 text-zinc-400 border border-zinc-800">ROBLOX PLACE / MAP</span>
             <span class="text-[10px] text-zinc-600 font-mono">01 // CREATED</span>
@@ -442,20 +399,17 @@
           <h4 class="font-gaming text-lg font-bold text-white mb-2 uppercase tracking-wide">GMG DISTRICT // ABSTRACT WORLD</h4>
           <p class="text-zinc-500 text-xs md:text-sm mb-6 leading-relaxed">Map hangout dan mabar resmi dengan estetika cyber-abstract. Dipenuhi dengan spot nongkrong yang dikelilingi karya seni komunitas dan tempat pamer avatar.</p>
         </div>
-
         <button onclick="openMapModal()" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors cursor-pointer text-left w-fit">
           PLAY ON ROBLOX &rarr;
         </button>
       </div>
 
-      <!-- Karya 2: Clothing & Merch -->
+      <!-- Karya 2: Outfit -->
       <div class="p-6 bg-zinc-950/40 border border-zinc-900 hover:border-zinc-500 transition-all duration-300 relative group flex flex-col justify-between">
         <div>
-          <!-- Foto Preview Outfit -->
           <div class="w-full aspect-video bg-zinc-900 border border-zinc-800 mb-5 overflow-hidden relative">
             <img src="outfit.png" alt="GMG Team Off-Grid Outfit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onError="this.src='https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600&q=80'">
           </div>
-
           <div class="flex justify-between items-start mb-4">
             <span class="text-[9px] font-mono px-2 py-0.5 bg-zinc-900 text-zinc-400 border border-zinc-800">CLOTHING & MERCH</span>
             <span class="text-[10px] text-zinc-600 font-mono">02 // CREATED</span>
@@ -463,7 +417,6 @@
           <h4 class="font-gaming text-lg font-bold text-white mb-2 uppercase tracking-wide">GMG TEAM OFF-GRID OUTFIT</h4>
           <p class="text-zinc-500 text-xs md:text-sm mb-6 leading-relaxed">Merchandise virtual resmi dari GMG Team di catalog Roblox. Mengusung gaya busana grey-dark camo, jaket dan celana dengan logo "GMG Team" yang khas.</p>
         </div>
-
         <button onclick="openCatalogModal()" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors cursor-pointer text-left w-fit">
           CATALOG STORE &rarr;
         </button>
@@ -474,37 +427,25 @@
   <!-- MODAL POPUP 1: GMG DISTRICT MAP -->
   <div id="mapModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden transition-all duration-300">
     <div class="bg-zinc-950 border border-zinc-800 p-6 md:p-8 rounded-none max-w-md w-full relative shadow-[0_0_50px_rgba(255,255,255,0.1)]">
-      <button onclick="closeMapModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white text-lg font-mono p-1">
-        ✕
-      </button>
-
+      <button onclick="closeMapModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white text-lg font-mono p-1">✕</button>
       <div class="mb-6">
         <div class="flex items-center gap-2 mb-1">
-          <svg class="w-3 h-3 fill-zinc-500" viewBox="0 0 24 24">
-            <path d="M18.5 0L24 18.5 5.5 24 0 5.5 18.5 0zM14.5 11.5l-5 1.5 1.5 5 5-1.5-1.5-5z"/>
-          </svg>
+          <svg class="w-3 h-3 fill-zinc-500" viewBox="0 0 24 24"><path d="M18.5 0L24 18.5 5.5 24 0 5.5 18.5 0zM14.5 11.5l-5 1.5 1.5 5 5-1.5-1.5-5z"/></svg>
           <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-widest">// SELECT DESTINATION</span>
         </div>
         <h3 class="font-gaming text-xl font-black text-white uppercase tracking-wide">GMG DISTRICT WORLD</h3>
         <p class="text-zinc-400 text-xs mt-1">Pilih tautan yang ingin kamu buka:</p>
       </div>
-
       <div class="flex flex-col gap-3 font-gaming text-xs">
         <a href="https://www.roblox.com/share/g/182046632" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-600 transition-all flex justify-between items-center">
-          <span>🏰 LINK COMMUNITY</span>
-          <span>&rarr;</span>
+          <span>🏰 LINK COMMUNITY</span><span>&rarr;</span>
         </a>
-
         <a href="https://www.roblox.com/share?code=26ce82bbbb7cef438b647d192673e126&type=ExperienceDetails&stamp=1790535469860" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-600 transition-all flex justify-between items-center">
-          <span>🎮 LINK MAP ROBLOX</span>
-          <span>&rarr;</span>
+          <span>🎮 LINK MAP ROBLOX</span><span>&rarr;</span>
         </a>
       </div>
-
       <div class="mt-6 pt-4 border-t border-zinc-900 text-center">
-        <button onclick="closeMapModal()" class="text-[10px] font-mono text-zinc-500 hover:text-white uppercase tracking-widest">
-          [ TUTUP JENDELA ]
-        </button>
+        <button onclick="closeMapModal()" class="text-[10px] font-mono text-zinc-500 hover:text-white uppercase tracking-widest">[ TUTUP JENDELA ]</button>
       </div>
     </div>
   </div>
@@ -512,42 +453,28 @@
   <!-- MODAL POPUP 2: GMG STORE OUTFIT -->
   <div id="catalogModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden transition-all duration-300">
     <div class="bg-zinc-950 border border-zinc-800 p-6 md:p-8 rounded-none max-w-md w-full relative shadow-[0_0_50px_rgba(255,255,255,0.1)]">
-      <button onclick="closeCatalogModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white text-lg font-mono p-1">
-        ✕
-      </button>
-
+      <button onclick="closeCatalogModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white text-lg font-mono p-1">✕</button>
       <div class="mb-6">
         <div class="flex items-center gap-2 mb-1">
-          <svg class="w-3 h-3 fill-zinc-500" viewBox="0 0 24 24">
-            <path d="M18.5 0L24 18.5 5.5 24 0 5.5 18.5 0zM14.5 11.5l-5 1.5 1.5 5 5-1.5-1.5-5z"/>
-          </svg>
+          <svg class="w-3 h-3 fill-zinc-500" viewBox="0 0 24 24"><path d="M18.5 0L24 18.5 5.5 24 0 5.5 18.5 0zM14.5 11.5l-5 1.5 1.5 5 5-1.5-1.5-5z"/></svg>
           <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-widest">// SELECT CATALOG CATEGORY</span>
         </div>
         <h3 class="font-gaming text-xl font-black text-white uppercase tracking-wide">GMG STORE COLLECTION</h3>
         <p class="text-zinc-400 text-xs mt-1">Pilih category outfit Roblox yang ingin kamu buka:</p>
       </div>
-
       <div class="flex flex-col gap-3 font-gaming text-xs">
         <a href="https://www.roblox.com/catalog/112872288786373/Deeys-Hoodie-Grey-x-Camo-Gokil" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-600 transition-all flex justify-between items-center">
-          <span>🧥 GMG HOODIE GREY COLLECTION</span>
-          <span>&rarr;</span>
+          <span>🧥 GMG HOODIE GREY COLLECTION</span><span>&rarr;</span>
         </a>
-
         <a href="https://www.roblox.com/catalog/102968617404883/Deeys-Hoodie-Dark-Grey-x-Camo-Gokil" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-600 transition-all flex justify-between items-center">
-          <span>🧥 GMG HOODIE DARK COLLECTION</span>
-          <span>&rarr;</span>
+          <span>🧥 GMG HOODIE DARK COLLECTION</span><span>&rarr;</span>
         </a>
-
         <a href="https://www.roblox.com/catalog/122535967549083/GMG-Gokil-pants" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-600 transition-all flex justify-between items-center">
-          <span>👖 GMG PANTS COLLECTION</span>
-          <span>&rarr;</span>
+          <span>👖 GMG PANTS COLLECTION</span><span>&rarr;</span>
         </a>
       </div>
-
       <div class="mt-6 pt-4 border-t border-zinc-900 text-center">
-        <button onclick="closeCatalogModal()" class="text-[10px] font-mono text-zinc-500 hover:text-white uppercase tracking-widest">
-          [ TUTUP JENDELA ]
-        </button>
+        <button onclick="closeCatalogModal()" class="text-[10px] font-mono text-zinc-500 hover:text-white uppercase tracking-widest">[ TUTUP JENDELA ]</button>
       </div>
     </div>
   </div>
@@ -559,27 +486,21 @@
     <p class="text-zinc-500 text-xs md:text-sm max-w-sm mx-auto mb-10">Dapatkan informasi terkini, berpartisipasi dalam event, dan berteman dengan member aktif lainnya.</p>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-      <!-- Discord Card -->
       <a href="https://discord.gg/u7vfwQmcB6" target="_blank" class="p-8 bg-zinc-950/30 border border-zinc-900 hover:border-white transition-all duration-300 group text-left relative">
         <div class="absolute bottom-0 right-0 w-4 h-[1px] bg-white/20"></div>
         <div class="absolute bottom-0 right-0 h-4 w-[1px] bg-white/20"></div>
         <div class="w-12 h-12 bg-white text-black flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300">
-          <svg class="w-7 h-7 fill-black" viewBox="0 0 24 24">
-            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-          </svg>
+          <svg class="w-7 h-7 fill-black" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
         </div>
         <h4 class="font-gaming text-lg font-bold text-white uppercase mb-1.5 tracking-wide">SpoTV | Barbisstudio</h4>
         <p class="text-xs text-zinc-500 leading-relaxed font-medium">Tempat koordinasi, mabar, voice chat, dan pusat event kompetisi online GMG Team.</p>
       </a>
 
-      <!-- TikTok Card -->
       <a href="https://tiktok.com/@gokilteam26" target="_blank" class="p-8 bg-zinc-950/30 border border-zinc-900 hover:border-white transition-all duration-300 group text-left relative">
         <div class="absolute bottom-0 right-0 w-4 h-[1px] bg-white/20"></div>
         <div class="absolute bottom-0 right-0 h-4 w-[1px] bg-white/20"></div>
         <div class="w-12 h-12 bg-white text-black flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300">
-          <svg class="w-7 h-7 fill-black" viewBox="0 0 24 24">
-            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.31 1.56-1.28 2.56.02.93.52 1.81 1.3 2.31.83.54 1.92.65 2.85.3 1.12-.4 1.87-1.49 1.88-2.69.01-4.28.01-8.56.01-12.84z"/>
-          </svg>
+          <svg class="w-7 h-7 fill-black" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.31 1.56-1.28 2.56.02.93.52 1.81 1.3 2.31.83.54 1.92.65 2.85.3 1.12-.4 1.87-1.49 1.88-2.69.01-4.28.01-8.56.01-12.84z"/></svg>
         </div>
         <h4 class="font-gaming text-lg font-bold text-white uppercase mb-1.5 tracking-wide">TIKTOK OFFICIAL</h4>
         <p class="text-xs text-zinc-500 leading-relaxed font-medium">Tempat membagikan momen-momen seru mabar, highlight, gameplay, dan video kreatif GMG Team.</p>
@@ -592,31 +513,19 @@
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-zinc-600 font-mono tracking-wider">
       <div class="flex items-center gap-3">
         <img src="logo.png" alt="GMG Logo Tiny" class="w-6 h-6 object-contain filter grayscale opacity-40">
-        <svg class="w-3.5 h-3.5 fill-zinc-600 opacity-60" viewBox="0 0 24 24">
-          <path d="M18.5 0L24 18.5 5.5 24 0 5.5 18.5 0zM14.5 11.5l-5 1.5 1.5 5 5-1.5-1.5-5z"/>
-        </svg>
+        <svg class="w-3.5 h-3.5 fill-zinc-600 opacity-60" viewBox="0 0 24 24"><path d="M18.5 0L24 18.5 5.5 24 0 5.5 18.5 0zM14.5 11.5l-5 1.5 1.5 5 5-1.5-1.5-5z"/></svg>
         <p>&copy; 2026 GMG TEAM ROBLOX.</p>
       </div>
       <p>ESTABLISHED // FOR GAMERS & Barbisstudio</p>
     </div>
   </footer>
 
-  <!-- Script Modal Popup & Smart Auto Slider JavaScript -->
+  <!-- Script Modal Popup & Slider JavaScript -->
   <script>
-    // Modal Popup Control
-    function openMapModal() {
-      document.getElementById('mapModal').classList.remove('hidden');
-    }
-    function closeMapModal() {
-      document.getElementById('mapModal').classList.add('hidden');
-    }
-
-    function openCatalogModal() {
-      document.getElementById('catalogModal').classList.remove('hidden');
-    }
-    function closeCatalogModal() {
-      document.getElementById('catalogModal').classList.add('hidden');
-    }
+    function openMapModal() { document.getElementById('mapModal').classList.remove('hidden'); }
+    function closeMapModal() { document.getElementById('mapModal').classList.add('hidden'); }
+    function openCatalogModal() { document.getElementById('catalogModal').classList.remove('hidden'); }
+    function closeCatalogModal() { document.getElementById('catalogModal').classList.add('hidden'); }
 
     window.onclick = function(event) {
       const mapModal = document.getElementById('mapModal');
@@ -625,31 +534,33 @@
       if (event.target === catalogModal) closeCatalogModal();
     }
 
-    // Helper Function Auto-Slider
     function initAutoSlider(elementId, intervalTime = 5000) {
       const slider = document.getElementById(elementId);
       if (!slider) return;
-
       const totalSlides = slider.children.length;
-
       if (totalSlides > 1) {
         setInterval(() => {
           const slideWidth = slider.clientWidth;
           let currentSlide = Math.round(slider.scrollLeft / slideWidth);
           let nextSlide = (currentSlide + 1) % totalSlides;
-
-          slider.scrollTo({
-            left: slideWidth * nextSlide,
-            behavior: 'smooth'
-          });
+          slider.scrollTo({ left: slideWidth * nextSlide, behavior: 'smooth' });
         }, intervalTime);
       }
     }
 
-    // Jalankan Auto-slider Cerdas untuk kedua galeri
-    initAutoSlider('gallerySlider', 5000); // Slider Hangout
-    initAutoSlider('collabSlider', 5000);  // Slider Collab Invitation
+    // Navigasi Manual Kalender Bulan
+    function nextMonth() {
+      const slider = document.getElementById('calendarSlider');
+      slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+    }
+    function prevMonth() {
+      const slider = document.getElementById('calendarSlider');
+      slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
+    }
+
+    initAutoSlider('gallerySlider', 5000);
+    initAutoSlider('collabSlider', 5000);
   </script>
 
 </body>
-</html>
+          </html>
