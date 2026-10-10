@@ -29,24 +29,32 @@ function initAutoSlider(elementId, intervalTime = 5000) {
 // Navigasi Kalender
 function nextMonth() {
   const slider = document.getElementById('calendarSlider');
-  if(slider) slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+  if (slider) slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
 }
 function prevMonth() {
   const slider = document.getElementById('calendarSlider');
-  if(slider) slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
+  if (slider) slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
 }
 
-// Memuat komponen kalender.html secara terpisah ke dalam index.html
+// Memuat Komponen Eksternal (Galeri & Kalender)
 document.addEventListener("DOMContentLoaded", () => {
+  // 1. Load Galeri Foto
+  fetch('galeri.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('galeri-container').innerHTML = data;
+      // Inisialisasi Auto-slider setelah galeri berhasil dimuat
+      initAutoSlider('gallerySlider', 5000);
+      initAutoSlider('eventSlider', 5000);
+      initAutoSlider('collabSlider', 5000);
+    })
+    .catch(error => console.error('Gagal memuat galeri:', error));
+
+  // 2. Load Kalender
   fetch('kalender.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('kalender-container').innerHTML = data;
     })
     .catch(error => console.error('Gagal memuat kalender:', error));
-
-  // Inisialisasi Auto-slider Galeri
-  initAutoSlider('gallerySlider', 5000);
-  initAutoSlider('eventSlider', 5000);
-  initAutoSlider('collabSlider', 5000);
 });
