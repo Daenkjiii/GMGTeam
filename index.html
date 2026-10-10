@@ -84,47 +84,10 @@
     </div>
   </section>
 
-  <!-- Section Galeri Foto -->
-  <section id="galeri" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900/60">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-      <div>
-        <h2 class="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.25em] mb-2">// MEDIA & MOMENTS</h2>
-        <h3 class="font-gaming text-3xl font-black text-white uppercase tracking-tight">GALERI KOMUNITAS</h3>
-      </div>
-      <p class="text-zinc-500 text-xs md:text-sm max-w-md">Kumpulan keseruan main bareng (mabar), serta event-event seru dari keluarga besar GMG Team.</p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
-        <div id="gallerySlider" class="slider-snap flex w-full h-full overflow-x-auto">
-          <div class="slider-snap-item w-full h-full flex-shrink-0"><img src="foto1.jpg" alt="Hangout 1" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500"></div>
-          <div class="slider-snap-item w-full h-full flex-shrink-0"><img src="foto1_2.jpg" alt="Hangout 2" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto1.jpg'"></div>
-          <div class="slider-snap-item w-full h-full flex-shrink-0"><img src="foto1_3.jpg" alt="Hangout 3" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto1.jpg'"></div>
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
-        <div class="absolute bottom-4 left-4 z-10 pointer-events-none"><p class="text-[10px] font-mono text-zinc-500">MEMORY</p><p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">HANGOUT</p></div>
-      </div>
-      <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
-        <div id="eventSlider" class="slider-snap flex w-full h-full overflow-x-auto">
-          <div class="slider-snap-item w-full h-full flex-shrink-0"><img src="foto2.jpg" alt="Event 1" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500"></div>
-          <div class="slider-snap-item w-full h-full flex-shrink-0"><img src="foto2_2.jpg" alt="Event 2" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto2.jpg'"></div>
-          <div class="slider-snap-item w-full h-full flex-shrink-0"><img src="foto2_3.jpg" alt="Event 3" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto2.jpg'"></div>
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
-        <div class="absolute bottom-4 left-4 z-10 pointer-events-none"><p class="text-[10px] font-mono text-zinc-500">EVENT</p><p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">GMGTEAM</p></div>
-      </div>
-      <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
-        <div id="collabSlider" class="slider-snap flex w-full h-full overflow-x-auto">
-          <div class="slider-snap-item w-full h-full flex-shrink-0"><img src="foto3.jpg" alt="Collab 1" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500"></div>
-          <div class="slider-snap-item w-full h-full flex-shrink-0"><img src="foto3_2.jpg" alt="Collab 2" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto3.jpg'"></div>
-          <div class="slider-snap-item w-full h-full flex-shrink-0"><img src="foto3_3.jpg" alt="Collab 3" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto3.jpg'"></div>
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
-        <div class="absolute bottom-4 left-4 z-10 pointer-events-none"><p class="text-[10px] font-mono text-zinc-500">COLLAB</p><p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">INVITATION</p></div>
-      </div>
-    </div>
-  </section>
+  <!-- PENAMPUNG GALERI (Dipanggil dari galeri.html) -->
+  <div id="galeri-container"></div>
 
-  <!-- PENAMPUNG UNTUK KALENDER (Dipanggil Eksternal) -->
+  <!-- PENAMPUNG KALENDER (Dipanggil dari kalender.html) -->
   <div id="kalender-container"></div>
 
   <!-- Section Daftar Karya -->
@@ -193,7 +156,7 @@
     &copy; 2026 GMG TEAM ROBLOX.
   </footer>
 
-  <!-- Memanggil Script JS Utama -->
+  <!-- Script JS Eksternal -->
   <script src="script.js"></script>
 </body>
-          </html>
+</html>
