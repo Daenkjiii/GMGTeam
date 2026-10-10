@@ -1,0 +1,87 @@
+<section id="kalender" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900/60">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+    <div>
+      <h2 class="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.25em] mb-2">// MAP INVITATION AVAILABILITY</h2>
+      <h3 class="font-gaming text-3xl font-black text-white uppercase tracking-tight">STATUS JADWAL INVITATION</h3>
+    </div>
+    <p class="text-zinc-500 text-xs md:text-sm max-w-md">Jadwal invitation dibuka setiap hari senin-jum'at. Cek panduan warna di bawah untuk melihat tanggal yang masih bisa di-booking/keep.</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 font-mono text-xs">
+    <div class="p-4 bg-red-950/20 border border-red-900/60 flex items-start gap-3">
+      <span class="w-3.5 h-3.5 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)] mt-0.5 flex-shrink-0"></span>
+      <div><p class="font-bold text-red-400 font-gaming uppercase tracking-wider mb-0.5">MERAH // FULL / BOOKED</p><p class="text-[11px] text-zinc-400">Jadwal invitation terisi penuh.</p></div>
+    </div>
+    <div class="p-4 bg-emerald-950/20 border border-emerald-900/60 flex items-start gap-3">
+      <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-0.5 flex-shrink-0"></span>
+      <div><p class="font-bold text-emerald-400 font-gaming uppercase tracking-wider mb-0.5">HIJAU // AVAILABLE</p><p class="text-[11px] text-zinc-400">Tanggal masih kosong/bisa di-keep.</p></div>
+    </div>
+    <div class="p-4 bg-zinc-900 border border-white/40 flex items-start gap-3">
+      <span class="w-3.5 h-3.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] mt-0.5 flex-shrink-0"></span>
+      <div><p class="font-bold text-white font-gaming uppercase tracking-wider mb-0.5">PUTIH // SPECIAL EVENT</p><p class="text-[11px] text-zinc-400">Khusus event internal GMG Team.</p></div>
+    </div>
+  </div>
+
+  <div class="bg-zinc-950/60 border border-zinc-900 p-6 md:p-8 relative">
+    <div class="flex items-center justify-between mb-6 pb-4 border-b border-zinc-900">
+      <div class="flex items-center gap-3"><span class="w-3 h-3 bg-white inline-block"></span><span class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">[ JADWAL REAL-TIME ]</span></div>
+      <div class="flex items-center gap-2 font-gaming text-xs">
+        <button onclick="prevMonth()" class="px-3 py-1 bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-800 transition-colors cursor-pointer">&larr; PREV</button>
+        <button onclick="nextMonth()" class="px-3 py-1 bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-800 transition-colors cursor-pointer">NEXT &rarr;</button>
+      </div>
+    </div>
+
+    <div id="calendarSlider" class="slider-snap flex w-full overflow-x-auto gap-8">
+      <!-- OKTOBER 2026 -->
+      <div class="slider-snap-item w-full flex-shrink-0">
+        <h4 class="font-gaming text-xl font-bold text-white uppercase tracking-wider mb-4">OKTOBER 2026</h4>
+        <div class="grid grid-cols-7 gap-2 text-center text-[10px] font-mono text-zinc-500 font-bold uppercase mb-3">
+          <div>SEN</div><div>SEL</div><div>RAB</div><div>KAM</div><div>JUM</div><div class="text-white">SAB</div><div class="text-white">MIN</div>
+        </div>
+        <div class="grid grid-cols-7 gap-2 text-xs font-mono">
+          <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">28</div>
+          <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">29</div>
+          <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">30</div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">01</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">02</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">03</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+          <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">04</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">05</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">06</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">07</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">08</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">09</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">10</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+          <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">11</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">12</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">13</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">14</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">15</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">16</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">17</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+          <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">18</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">19</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">20</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">21</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">22</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">23</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">24</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+          <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">25</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">26</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 relative"><span class="font-bold">27</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500"></span></div>
+          <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 relative"><span class="font-bold">28</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500"></span></div>
+          <div class="aspect-square bg-emerald-950/40 border border-emerald-800/80 p-2 text-emerald-200 relative"><span class="font-bold">29</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-emerald-500"></span></div>
+          <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative"><span class="font-bold">30</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500"></span></div>
+          <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative"><span class="font-bold">31</span><span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-zinc-500">INGIN MENG-KEEP TANGGAL INVITATION YANG MASIH HIJAU?</p>
+      <a href="https://discord.gg/u7vfwQmcB6" target="_blank" class="px-6 py-2.5 bg-white text-black font-gaming font-bold text-xs uppercase hover:bg-zinc-200 border border-white">
+        BOOK / KEEP VIA DISCORD &rarr;
+      </a>
+    </div>
+  </div>
+                                                                                                                                  </section>
