@@ -33,7 +33,6 @@
     .slider-snap-item {
       scroll-snap-align: start;
     }
-    /* Scrollbar */
     .slider-snap::-webkit-scrollbar {
       display: none;
     }
@@ -63,8 +62,9 @@
       </a>
 
       <!-- Navigation Links -->
-      <nav class="flex items-center gap-5 text-xs md:text-sm font-bold tracking-wider uppercase">
+      <nav class="flex items-center gap-4 md:gap-5 text-xs md:text-sm font-bold tracking-wider uppercase">
         <a href="#galeri" class="text-zinc-400 hover:text-white transition-colors">// GALERI</a>
+        <a href="#kalender" class="text-zinc-400 hover:text-white transition-colors">// JADWAL</a>
         <a href="#karya" class="text-zinc-400 hover:text-white transition-colors">// KARYA</a>
         <a href="#sosmed" class="text-zinc-400 hover:text-white transition-colors">// SOSMED</a>
       </nav>
@@ -157,26 +157,21 @@
         </div>
       </div>
 
-      <!-- Foto 3 (COLLAB INVITATION - SLIDER) -->
+      <!-- Foto 3 (COLLAB INVITATION - SLIDER 5 FOTO) -->
       <div class="group relative overflow-hidden bg-zinc-950 border border-zinc-900 aspect-video">
         <div id="collabSlider" class="slider-snap flex w-full h-full overflow-x-auto">
-          <!-- Slide 1 -->
           <div class="slider-snap-item w-full h-full flex-shrink-0">
             <img src="foto3.jpg" alt="Collab 1" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500">
           </div>
-          <!-- Slide 2 -->
           <div class="slider-snap-item w-full h-full flex-shrink-0">
             <img src="foto3_2.jpg" alt="Collab 2" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto3.jpg'">
           </div>
-          <!-- Slide 3 -->
           <div class="slider-snap-item w-full h-full flex-shrink-0">
             <img src="foto3_3.jpg" alt="Collab 3" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto3.jpg'">
           </div>
-          <!-- Slide 4 -->
           <div class="slider-snap-item w-full h-full flex-shrink-0">
             <img src="foto3_4.jpg" alt="Collab 4" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto3.jpg'">
           </div>
-          <!-- Slide 5 -->
           <div class="slider-snap-item w-full h-full flex-shrink-0">
             <img src="foto3_5.jpg" alt="Collab 5" class="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:brightness-100 transition-all duration-500" onError="this.src='foto3.jpg'">
           </div>
@@ -187,6 +182,230 @@
           <p class="text-[10px] font-mono text-zinc-500">COLLAB</p>
           <p class="text-sm font-bold text-white uppercase tracking-wider font-gaming">INVITATION</p>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Kalender Status Invitation & Event -->
+  <section id="kalender" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900/60">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div>
+        <h2 class="text-[10px] font-mono text-zinc-600 uppercase tracking-[0.25em] mb-2">// MAP INVITATION AVAILABILITY</h2>
+        <h3 class="font-gaming text-3xl font-black text-white uppercase tracking-tight">STATUS JADWAL INVITATION</h3>
+      </div>
+      <p class="text-zinc-500 text-xs md:text-sm max-w-md">Jadwal invitation dibuka setiap hari kerja. Cek panduan warna di bawah untuk melihat tanggal yang masih bisa di-booking/keep.</p>
+    </div>
+
+    <!-- Kotak Panduan Warna (Legend Panel) -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 font-mono text-xs">
+      <!-- Legend 1: Booked -->
+      <div class="p-4 bg-red-950/20 border border-red-900/60 flex items-start gap-3">
+        <span class="w-3.5 h-3.5 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)] mt-0.5 flex-shrink-0"></span>
+        <div>
+          <p class="font-bold text-red-400 font-gaming uppercase tracking-wider mb-0.5">MERAH // FULL / BOOKED</p>
+          <p class="text-[11px] text-zinc-400 leading-relaxed">Jadwal invitation pada tanggal ini sudah terisi penuh dan tidak dapat dikosongkan lagi.</p>
+        </div>
+      </div>
+
+      <!-- Legend 2: Available -->
+      <div class="p-4 bg-zinc-950 border border-zinc-800 flex items-start gap-3">
+        <span class="w-3.5 h-3.5 rounded-full bg-zinc-600 border border-zinc-400 mt-0.5 flex-shrink-0"></span>
+        <div>
+          <p class="font-bold text-zinc-200 font-gaming uppercase tracking-wider mb-0.5">GELAP // AVAILABLE (KEEPABLE)</p>
+          <p class="text-[11px] text-zinc-400 leading-relaxed">Tanggal masih kosong! Anda dapat meng-keep jadwal ini untuk komunitas/event Anda.</p>
+        </div>
+      </div>
+
+      <!-- Legend 3: Weekend Event -->
+      <div class="p-4 bg-zinc-900 border border-white/40 flex items-start gap-3">
+        <span class="w-3.5 h-3.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] mt-0.5 flex-shrink-0"></span>
+        <div>
+          <p class="font-bold text-white font-gaming uppercase tracking-wider mb-0.5">PUTIH // SPECIAL EVENT</p>
+          <p class="text-[11px] text-zinc-400 leading-relaxed">Hari Sabtu & Minggu khusus untuk event internal, gathering, dan kegiatan spesial GMG Team.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Container Kalender -->
+    <div class="bg-zinc-950/60 border border-zinc-900 p-6 md:p-8">
+      
+      <!-- Header Bulan -->
+      <div class="flex items-center justify-between mb-6 pb-4 border-b border-zinc-900">
+        <div class="flex items-center gap-3">
+          <span class="w-3 h-3 bg-white inline-block"></span>
+          <h4 class="font-gaming text-xl font-bold text-white uppercase tracking-wider">OKTOBER 2026</h4>
+        </div>
+        <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">[ JADWAL REAL-TIME ]</span>
+      </div>
+
+      <!-- Grid Hari dalam Seminggu -->
+      <div class="grid grid-cols-7 gap-2 text-center text-[10px] font-mono text-zinc-500 font-bold uppercase mb-3">
+        <div>SEN</div>
+        <div>SEL</div>
+        <div>RAB</div>
+        <div>KAM</div>
+        <div>JUM</div>
+        <div class="text-white">SAB</div>
+        <div class="text-white">MIN</div>
+      </div>
+
+      <!-- Grid Tanggal Bulan Oktober 2026 -->
+      <div class="grid grid-cols-7 gap-2 text-xs font-mono">
+        <!-- Tanggal Kosong Bulan Lalu -->
+        <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">28</div>
+        <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">29</div>
+        <div class="aspect-square bg-zinc-950/20 border border-zinc-900/30 p-2 text-zinc-800 pointer-events-none">30</div>
+
+        <!-- 01 KAMIS & 02 JUMAT (Booked) -->
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">01</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">02</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        
+        <!-- 03 SABTU & 04 MINGGU (Special Event) -->
+        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
+          <span class="font-bold">03</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        </div>
+        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
+          <span class="font-bold">04</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        </div>
+
+        <!-- 05–09 SENIN-JUMAT (Booked) -->
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">05</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">06</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">07</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">08</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">09</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+
+        <!-- 10 SABTU & 11 MINGGU (Special Event) -->
+        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
+          <span class="font-bold">10</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        </div>
+        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
+          <span class="font-bold">11</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        </div>
+
+        <!-- 12–16 SENIN-JUMAT (Booked) -->
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">12</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">13</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">14</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">15</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">16</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+
+        <!-- 17 SABTU & 18 MINGGU (Special Event) -->
+        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
+          <span class="font-bold">17</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        </div>
+        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
+          <span class="font-bold">18</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        </div>
+
+        <!-- 19–23 SENIN-JUMAT (Booked) -->
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">19</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">20</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">21</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">22</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">23</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+
+        <!-- 24 SABTU & 25 MINGGU (Special Event) -->
+        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
+          <span class="font-bold">24</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        </div>
+        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
+          <span class="font-bold">25</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        </div>
+
+        <!-- 26–29 SENIN-KAMIS (Available / Keepable) -->
+        <div class="aspect-square bg-zinc-950 border border-zinc-800 p-2 text-zinc-300 hover:border-zinc-500 transition-colors cursor-pointer">
+          <span class="font-bold">26</span>
+        </div>
+        <div class="aspect-square bg-zinc-950 border border-zinc-800 p-2 text-zinc-300 hover:border-zinc-500 transition-colors cursor-pointer">
+          <span class="font-bold">27</span>
+        </div>
+        <div class="aspect-square bg-zinc-950 border border-zinc-800 p-2 text-zinc-300 hover:border-zinc-500 transition-colors cursor-pointer">
+          <span class="font-bold">28</span>
+        </div>
+        <div class="aspect-square bg-zinc-950 border border-zinc-800 p-2 text-zinc-300 hover:border-zinc-500 transition-colors cursor-pointer">
+          <span class="font-bold">29</span>
+        </div>
+
+        <!-- 30 JUMAT (Booked) -->
+        <div class="aspect-square bg-red-950/40 border border-red-800/80 p-2 text-red-200 relative group cursor-pointer">
+          <span class="font-bold">30</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-red-500 shadow-[0_0_6px_rgba(239,68,68,1)]"></span>
+        </div>
+
+        <!-- 31 SABTU (Special Event) -->
+        <div class="aspect-square bg-zinc-900 border border-white/40 p-2 text-white relative group cursor-pointer">
+          <span class="font-bold">31</span>
+          <span class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></span>
+        </div>
+      </div>
+
+      <!-- Tombol Keep Schedule CTA -->
+      <div class="mt-8 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-zinc-500">Ingin meng-keep tanggal invitation yang masih kosong (26–29 Oktober)?</p>
+        <a href="https://discord.gg/u7vfwQmcB6" target="_blank" class="px-6 py-2.5 bg-white text-black font-gaming font-bold text-xs uppercase hover:bg-zinc-200 transition-all border border-white">
+          BOOK / KEEP VIA DISCORD &rarr;
+        </a>
       </div>
 
     </div>
@@ -412,7 +631,6 @@
       if (totalSlides > 1) {
         setInterval(() => {
           const slideWidth = slider.clientWidth;
-          // Hitung index saat ini dari jarak geser scrollLeft
           let currentSlide = Math.round(slider.scrollLeft / slideWidth);
           let nextSlide = (currentSlide + 1) % totalSlides;
 
