@@ -62,7 +62,7 @@
 
   <!-- IDE 1: GAMING PRELOADER (Layar Loading) -->
   <div id="preloader" class="fixed inset-0 z-[9999] bg-zinc-950 flex flex-col items-center justify-center transition-opacity duration-700">
-    <img src="logo.png" class="w-24 h-24 sm:w-32 sm:h-32 animate-pulse mb-8 object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" alt="Loading Logo">
+    <img src="logo.png" class="w-24 h-24 sm:w-32 sm:h-32 animate-pulse mb-8 object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" alt="Loading Logo" onerror="this.style.display='none'">
     <div class="font-mono text-[10px] text-zinc-500 tracking-[0.3em] uppercase flex flex-col items-center gap-3">
       <span class="animate-pulse">CONNECTING TO GMG SERVER...</span>
       <div class="w-48 sm:w-64 h-[2px] bg-zinc-900 overflow-hidden relative">
@@ -75,7 +75,7 @@
   <header class="border-b border-zinc-900/80 backdrop-blur-md sticky top-0 z-50 bg-black/80">
     <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
       <a href="#" class="flex items-center gap-3 group">
-        <img src="logo.png" alt="GMG Team Logo" class="w-10 h-10 md:w-12 md:h-12 object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.2)] group-hover:scale-105 transition-transform duration-300">
+        <img src="logo.png" alt="GMG Team Logo" class="w-10 h-10 md:w-12 md:h-12 object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.2)] group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'">
         <div class="flex flex-col">
           <span class="font-gaming font-black text-lg md:text-xl text-white tracking-widest leading-none">GMG TEAM</span>
           <div class="flex items-center gap-1.5 mt-1">
@@ -85,8 +85,8 @@
         </div>
       </a>
       <nav class="flex items-center gap-4 md:gap-5 text-xs md:text-sm font-bold tracking-wider uppercase">
-        <a href="#galeri" class="text-zinc-400 hover:text-white transition-colors">// GALERI</a>
-        <a href="#kalender" class="text-zinc-400 hover:text-white transition-colors">// EVENT</a>
+        <a href="#galeri-container" class="text-zinc-400 hover:text-white transition-colors">// GALERI</a>
+        <a href="#kalender-container" class="text-zinc-400 hover:text-white transition-colors">// EVENT</a>
         <a href="#karya" class="text-zinc-400 hover:text-white transition-colors">// KARYA</a>
         <a href="#sosmed" class="text-zinc-400 hover:text-white transition-colors">// SOSMED</a>
       </nav>
@@ -98,16 +98,16 @@
     
     <!-- Floating Logo Transparan -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-      <img src="logo.png" class="absolute top-10 left-10 w-24 h-24 opacity-[0.06] animate-float filter grayscale blur-[1px]">
-      <img src="logo.png" class="absolute top-1/3 right-12 w-40 h-40 opacity-[0.04] animate-float-reverse anim-delay-2000 filter grayscale blur-[2px]">
-      <img src="logo.png" class="absolute bottom-1/4 left-[20%] w-16 h-16 opacity-[0.07] animate-float anim-delay-4000 filter grayscale">
-      <img src="logo.png" class="absolute bottom-10 right-1/4 w-20 h-20 opacity-[0.05] animate-float-reverse filter grayscale blur-[1px]">
+      <img src="logo.png" class="absolute top-10 left-10 w-24 h-24 opacity-[0.06] animate-float filter grayscale blur-[1px]" onerror="this.style.display='none'">
+      <img src="logo.png" class="absolute top-1/3 right-12 w-40 h-40 opacity-[0.04] animate-float-reverse anim-delay-2000 filter grayscale blur-[2px]" onerror="this.style.display='none'">
+      <img src="logo.png" class="absolute bottom-1/4 left-[20%] w-16 h-16 opacity-[0.07] animate-float anim-delay-4000 filter grayscale" onerror="this.style.display='none'">
+      <img src="logo.png" class="absolute bottom-10 right-1/4 w-20 h-20 opacity-[0.05] animate-float-reverse filter grayscale blur-[1px]" onerror="this.style.display='none'">
     </div>
 
     <div class="w-full flex justify-center items-center mb-6" data-aos="zoom-in" data-aos-duration="1000">
       <div class="relative flex justify-center items-center">
         <div class="absolute inset-0 bg-white/5 rounded-full blur-3xl transform scale-125"></div>
-        <img src="logo.png" alt="GMG Team Big Logo" class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-contain relative z-10 filter drop-shadow-[0_0_35px_rgba(255,255,255,0.3)] hover:scale-105 transition-transform duration-500 mx-auto">
+        <img src="logo.png" alt="GMG Team Big Logo" class="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 object-contain relative z-10 filter drop-shadow-[0_0_35px_rgba(255,255,255,0.3)] hover:scale-105 transition-transform duration-500 mx-auto" onerror="this.style.display='none'">
       </div>
     </div>
     
@@ -163,7 +163,7 @@
       <div class="p-6 bg-zinc-950/40 border border-zinc-900 hover:border-zinc-500 transition-all duration-300 relative group flex flex-col justify-between" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
         <div>
           <div class="w-full aspect-video bg-zinc-900 border border-zinc-800 mb-5 overflow-hidden relative">
-            <img src="map.png" alt="GMG District Map" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="map.png" alt="GMG District Map" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'">
           </div>
           <h4 class="font-gaming text-lg font-bold text-white mb-2 uppercase tracking-wide">GMG DISTRICT // ABSTRACT WORLD</h4>
           <p class="text-zinc-500 text-xs md:text-sm mb-6 leading-relaxed">Map hangout dan mabar komunitas. Dipenuhi dengan spot nongkrong yang dikelilingi karya seni komunitas.</p>
@@ -174,7 +174,7 @@
       <div class="p-6 bg-zinc-950/40 border border-zinc-900 hover:border-zinc-500 transition-all duration-300 relative group flex flex-col justify-between" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
         <div>
           <div class="w-full aspect-video bg-zinc-900 border border-zinc-800 mb-5 overflow-hidden relative">
-            <img src="outfit.png" alt="GMG Outfit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <img src="outfit.png" alt="GMG Outfit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'">
           </div>
           <h4 class="font-gaming text-lg font-bold text-white mb-2 uppercase tracking-wide">GMG TEAM OFF-GRID OUTFIT</h4>
           <p class="text-zinc-500 text-xs md:text-sm mb-6 leading-relaxed">Merchandise virtual resmi dari GMG Team di catalog Roblox. Mengusung gaya busana grey-dark camo.</p>
@@ -248,16 +248,11 @@
     <svg class="w-5 h-5 relative z-10 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
   </button>
 
-  <!-- Script JS External AOS & 3D Tilt -->
+  <!-- Library Eksternal (AOS & 3D Tilt) -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   
+  <!-- Script Utama Kita -->
   <script src="script.js"></script>
-  <script>
-    // Inisialisasi AOS saat halaman dimuat
-    document.addEventListener('DOMContentLoaded', function() {
-      AOS.init({ once: true, offset: 50 });
-    });
-  </script>
 </body>
 </html>
