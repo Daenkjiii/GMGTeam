@@ -14,12 +14,12 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     const preloader = document.getElementById('preloader');
     if(preloader) {
-      preloader.style.opacity = '0'; // Memudar perlahan
+      preloader.style.opacity = '0';
       setTimeout(() => {
-        preloader.style.display = 'none'; // Menghilangkan elemen
+        preloader.style.display = 'none';
       }, 700);
     }
-  }, 1500); // Tampil selama 1.5 detik
+  }, 1500); 
 });
 
 // ==========================================
@@ -43,22 +43,51 @@ function scrollToTop() {
 }
 
 // ==========================================
-// 4. FUNGSI MODAL (Popups Map & Store)
+// 4. FUNGSI MODAL (Map, Store, & Copy Menu)
 // ==========================================
 function openMapModal() { document.getElementById('mapModal').classList.remove('hidden'); }
 function closeMapModal() { document.getElementById('mapModal').classList.add('hidden'); }
+
 function openCatalogModal() { document.getElementById('catalogModal').classList.remove('hidden'); }
 function closeCatalogModal() { document.getElementById('catalogModal').classList.add('hidden'); }
 
+function openCopyModal() { document.getElementById('copyModal').classList.remove('hidden'); }
+function closeCopyModal() { document.getElementById('copyModal').classList.add('hidden'); }
+
+// Menutup modal otomatis jika klik di luar area kotak
 window.onclick = function(event) {
   const mapModal = document.getElementById('mapModal');
   const catalogModal = document.getElementById('catalogModal');
+  const copyModal = document.getElementById('copyModal');
+  
   if (event.target === mapModal) closeMapModal();
   if (event.target === catalogModal) closeCatalogModal();
+  if (event.target === copyModal) closeCopyModal();
 }
 
 // ==========================================
-// 5. FUNGSI SLIDER OTOMATIS (Galeri & Event)
+// 5. FUNGSI SALIN CEPAT (QUICK COPY)
+// ==========================================
+function copyToClipboard(text, buttonElement) {
+  navigator.clipboard.writeText(text).then(() => {
+    const statusSpan = buttonElement.querySelector('.copy-status');
+    if (statusSpan) {
+      const originalText = statusSpan.innerText;
+      statusSpan.innerText = 'COPIED!';
+      statusSpan.style.color = '#06b6d4'; // Warna Cyan ala gaming
+      
+      setTimeout(() => {
+        statusSpan.innerText = originalText;
+        statusSpan.style.color = ''; 
+      }, 2000);
+    }
+  }).catch(err => {
+    console.error('Gagal menyalin:', err);
+  });
+}
+
+// ==========================================
+// 6. FUNGSI SLIDER OTOMATIS (Galeri & Event)
 // ==========================================
 function initAutoSlider(elementId, intervalTime = 5000) {
   const slider = document.getElementById(elementId);
@@ -76,7 +105,7 @@ function initAutoSlider(elementId, intervalTime = 5000) {
 }
 
 // ==========================================
-// 6. NAVIGASI KALENDER
+// 7. NAVIGASI KALENDER
 // ==========================================
 function nextMonth() {
   const slider = document.getElementById('calendarSlider');
@@ -88,7 +117,7 @@ function prevMonth() {
 }
 
 // ==========================================
-// 7. MEMUAT FILE EKSTERNAL (Galeri & Kalender)
+// 8. MEMUAT FILE EKSTERNAL (Galeri & Kalender)
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   const loadGaleri = fetch('galeri.html')
@@ -110,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if(container) container.innerHTML = data;
     }).catch(error => console.error('Gagal memuat kalender:', error));
 
-  // Refresh animasi pudar (AOS) setelah HTML tambahan dimuat
+  // Refresh animasi AOS setelah galeri & kalender dimuat
   Promise.all([loadGaleri, loadKalender]).then(() => {
     if (typeof AOS !== 'undefined') AOS.refresh();
   });
