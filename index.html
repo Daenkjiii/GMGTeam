@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GMG Team | Roblox Gaming Community</title>
   
+  <!-- Favicon (Ikon Tab Browser) -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- SEO & Discord/WhatsApp Preview (Open Graph) -->
+  <meta name="description" content="Ranah GMG Team—ekosistem Roblox tempat kreativitas dan solidaritas main bareng menyatu.">
+  <meta property="og:title" content="GMG Team | Roblox Gaming Community">
+  <meta property="og:description" content="Gabung ke keluarga besar GMG Team. Tempat mabar, event, dan koleksi outfit kustom eksklusif!">
+  <!-- Pastikan menggunakan absolute URL untuk gambar preview agar muncul di Discord -->
+  <meta property="og:image" content="https://gmgteam.vercel.app/logo.png"> 
+  <meta property="og:url" content="https://gmgteam.vercel.app/">
+  <meta name="theme-color" content="#000000">
+
   <!-- Tailwind CSS CDN & Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Orbitron:wght@800;900&display=swap" rel="stylesheet">
@@ -29,6 +41,12 @@
         linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
     }
+
+    /* Custom Gaming Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #09090b; }
+    ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 10px; border: 2px solid #09090b; }
+    ::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
 
     /* Scroll Snap */
     .slider-snap { scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -60,7 +78,7 @@
 </head>
 <body class="bg-abstract grid-pattern text-zinc-300 min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
 
-  <!-- IDE 1: GAMING PRELOADER (Layar Loading) -->
+  <!-- GAMING PRELOADER (Layar Loading) -->
   <div id="preloader" class="fixed inset-0 z-[9999] bg-zinc-950 flex flex-col items-center justify-center transition-opacity duration-700">
     <img src="logo.png" class="w-24 h-24 sm:w-32 sm:h-32 animate-pulse mb-8 object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" alt="Loading Logo" onerror="this.style.display='none'">
     <div class="font-mono text-[10px] text-zinc-500 tracking-[0.3em] uppercase flex flex-col items-center gap-3">
@@ -128,7 +146,7 @@
       Selamat datang di ranah GMG Team—ekosistem Roblox tempat kreativitas tanpa batas, koleksi outfit kustom eksklusif, dan solidaritas main bareng menyatu. Kami memanggil kamu untuk menjadi bagian dari keluarga besar kami!
     </p>
 
-    <!-- IDE 4: LIVE DISCORD STATUS BADGE -->
+    <!-- LIVE DISCORD STATUS BADGE -->
     <div class="flex items-center justify-center gap-2.5 mb-10" data-aos="fade-up" data-aos-delay="450">
       <div class="relative flex h-2.5 w-2.5">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -149,7 +167,7 @@
   <!-- PENAMPUNG KALENDER -->
   <div id="kalender-container" data-aos="fade-up" data-aos-duration="1000"></div>
 
-  <!-- Section Daftar Karya (3D Tilt) -->
+  <!-- Section Daftar Karya -->
   <section id="karya" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900/60" data-aos="fade-up" data-aos-duration="1000">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
       <div>
@@ -241,9 +259,8 @@
     &copy; 2026 GMG TEAM ROBLOX.
   </footer>
 
-  <!-- IDE 5: TOMBOL BACK TO TOP (RADAR STYLE) -->
+  <!-- TOMBOL BACK TO TOP (RADAR STYLE) -->
   <button id="backToTop" class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-black border border-white/20 text-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 hover:border-cyan-500 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)] group overflow-hidden" onclick="scrollToTop()">
-    <!-- Garis Scanning Radar -->
     <div class="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent h-full w-full -translate-y-full group-hover:animate-[radar-scan_1.5s_linear_infinite]"></div>
     <svg class="w-5 h-5 relative z-10 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
   </button>
