@@ -156,6 +156,13 @@
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-sm mx-auto sm:max-w-none" data-aos="fade-up" data-aos-delay="500">
       <a href="https://discord.gg/u7vfwQmcB6" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-200 transition-all border border-white shadow-[0_0_25px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 font-gaming"><span>JOIN DISCORD</span></a>
+      
+      <!-- TOMBOL BUKA MENU SALIN LINK -->
+      <button onclick="openCopyModal()" class="w-full sm:w-auto px-8 py-4 bg-zinc-900 text-white font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-800 transition-all border border-zinc-700 shadow-[0_0_25px_rgba(0,0,0,0.5)] flex items-center justify-center gap-2 font-gaming cursor-pointer group">
+        <span>COPY LINK PENTING</span>
+        <svg class="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+      </button>
+
       <a href="https://tiktok.com/@gokilteam26" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-200 transition-all border border-white shadow-[0_0_25px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 font-gaming"><span>FOLLOW TIKTOK</span></a>
     </div>
   </section>
@@ -230,7 +237,7 @@
     </div>
   </section>
 
-  <!-- Modal Popups -->
+  <!-- Modal Popups (Map & Store) -->
   <div id="mapModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
     <div class="bg-zinc-950 border border-zinc-800 p-6 md:p-8 max-w-md w-full relative">
       <button onclick="closeMapModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white">✕</button>
@@ -250,6 +257,37 @@
         <a href="https://www.roblox.com/catalog/112872288786373/Deeys-Hoodie-Grey-x-Camo-Gokil" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between"><span>🧥 GMG HOODIE GREY</span><span>&rarr;</span></a>
         <a href="https://www.roblox.com/catalog/102968617404883/Deeys-Hoodie-Dark-Grey-x-Camo-Gokil" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between"><span>🧥 GMG HOODIE DARK</span><span>&rarr;</span></a>
         <a href="https://www.roblox.com/catalog/122535967549083/GMG-Gokil-pants" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between"><span>👖 GMG PANTS</span><span>&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Salin Link Cepat (Quick Copy Menu) -->
+  <div id="copyModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+    <div class="bg-zinc-950 border border-zinc-800 p-6 md:p-8 max-w-md w-full relative">
+      <button onclick="closeCopyModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white">✕</button>
+      <h3 class="font-gaming text-xl font-black text-white uppercase mb-2">SALIN LINK PENTING</h3>
+      <p class="text-zinc-500 text-xs mb-6">Klik tombol di bawah untuk menyalin tautan resmi GMG Team secara instan.</p>
+      
+      <div class="flex flex-col gap-3 font-gaming text-xs">
+        <button onclick="copyToClipboard('https://discord.gg/u7vfwQmcB6', this)" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center transition-colors cursor-pointer text-left">
+          <span class="truncate pr-2">💬 DISCORD COMMUNITY</span>
+          <span class="text-zinc-500 text-[10px] font-mono shrink-0 copy-status">COPY</span>
+        </button>
+
+        <button onclick="copyToClipboard('https://tiktok.com/@gokilteam26', this)" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center transition-colors cursor-pointer text-left">
+          <span class="truncate pr-2">🎵 TIKTOK OFFICIAL</span>
+          <span class="text-zinc-500 text-[10px] font-mono shrink-0 copy-status">COPY</span>
+        </button>
+
+        <button onclick="copyToClipboard('https://www.roblox.com/share?code=26ce82bbbb7cef438b647d192673e126&type=ExperienceDetails&stamp=1790535469860', this)" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center transition-colors cursor-pointer text-left">
+          <span class="truncate pr-2">🎮 MAP GMG DISTRICT</span>
+          <span class="text-zinc-500 text-[10px] font-mono shrink-0 copy-status">COPY</span>
+        </button>
+
+        <button onclick="copyToClipboard('https://www.roblox.com/catalog/112872288786373/Deeys-Hoodie-Grey-x-Camo-Gokil', this)" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center transition-colors cursor-pointer text-left">
+          <span class="truncate pr-2">🧥 KATALOG OUTFIT (HOODIE)</span>
+          <span class="text-zinc-500 text-[10px] font-mono shrink-0 copy-status">COPY</span>
+        </button>
       </div>
     </div>
   </div>
