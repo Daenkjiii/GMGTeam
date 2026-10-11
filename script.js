@@ -43,7 +43,7 @@ function scrollToTop() {
 }
 
 // ==========================================
-// 4. FUNGSI MODAL (Map, Store, & Copy Menu)
+// 4. FUNGSI MODAL (Map & Catalog Store)
 // ==========================================
 function openMapModal() { document.getElementById('mapModal').classList.remove('hidden'); }
 function closeMapModal() { document.getElementById('mapModal').classList.add('hidden'); }
@@ -51,36 +51,30 @@ function closeMapModal() { document.getElementById('mapModal').classList.add('hi
 function openCatalogModal() { document.getElementById('catalogModal').classList.remove('hidden'); }
 function closeCatalogModal() { document.getElementById('catalogModal').classList.add('hidden'); }
 
-function openCopyModal() { document.getElementById('copyModal').classList.remove('hidden'); }
-function closeCopyModal() { document.getElementById('copyModal').classList.add('hidden'); }
-
 // Menutup modal otomatis jika klik di luar area kotak
 window.onclick = function(event) {
   const mapModal = document.getElementById('mapModal');
   const catalogModal = document.getElementById('catalogModal');
-  const copyModal = document.getElementById('copyModal');
   
   if (event.target === mapModal) closeMapModal();
   if (event.target === catalogModal) closeCatalogModal();
-  if (event.target === copyModal) closeCopyModal();
 }
 
 // ==========================================
-// 5. FUNGSI SALIN CEPAT (QUICK COPY)
+// 5. FUNGSI SALIN LINK DALAM MODAL (QUICK COPY)
 // ==========================================
 function copyToClipboard(text, buttonElement) {
   navigator.clipboard.writeText(text).then(() => {
-    const statusSpan = buttonElement.querySelector('.copy-status');
-    if (statusSpan) {
-      const originalText = statusSpan.innerText;
-      statusSpan.innerText = 'COPIED!';
-      statusSpan.style.color = '#06b6d4'; // Warna Cyan ala gaming
-      
-      setTimeout(() => {
-        statusSpan.innerText = originalText;
-        statusSpan.style.color = ''; 
-      }, 2000);
-    }
+    const originalText = buttonElement.innerText;
+    buttonElement.innerText = 'COPIED!';
+    buttonElement.style.color = '#06b6d4'; // Warna Cyan ala gaming
+    buttonElement.style.borderColor = '#06b6d4';
+    
+    setTimeout(() => {
+      buttonElement.innerText = originalText;
+      buttonElement.style.color = ''; 
+      buttonElement.style.borderColor = '';
+    }, 2000);
   }).catch(err => {
     console.error('Gagal menyalin:', err);
   });
