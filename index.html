@@ -77,7 +77,7 @@
 </head>
 <body class="bg-abstract grid-pattern text-zinc-300 min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
 
-  <!-- GAMING PRELOADER (Layar Loading) -->
+  <!-- GAMING PRELOADER -->
   <div id="preloader" class="fixed inset-0 z-[9999] bg-zinc-950 flex flex-col items-center justify-center transition-opacity duration-700">
     <img src="logo.png" class="w-24 h-24 sm:w-32 sm:h-32 animate-pulse mb-8 object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" alt="Loading Logo" onerror="this.style.display='none'">
     <div class="font-mono text-[10px] text-zinc-500 tracking-[0.3em] uppercase flex flex-col items-center gap-3">
@@ -112,8 +112,6 @@
 
   <!-- Hero Section -->
   <section class="max-w-5xl mx-auto px-6 pt-12 pb-20 text-center flex flex-col items-center justify-center relative min-h-[85vh]">
-    
-    <!-- Floating Logo Transparan -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
       <img src="logo.png" class="absolute top-10 left-10 w-24 h-24 opacity-[0.06] animate-float filter grayscale blur-[1px]" onerror="this.style.display='none'">
       <img src="logo.png" class="absolute top-1/3 right-12 w-40 h-40 opacity-[0.04] animate-float-reverse anim-delay-2000 filter grayscale blur-[2px]" onerror="this.style.display='none'">
@@ -135,7 +133,6 @@
       </div>
     </div>
 
-    <!-- Judul Glitch -->
     <h1 class="font-gaming text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mb-6 leading-tight w-full text-center" data-aos="fade-up" data-aos-delay="300">
       <span class="glitch-text" data-text="GOKIL MANA GOKIL">GOKIL MANA GOKIL</span> <br>
       <span class="bg-gradient-to-b from-white via-zinc-200 to-zinc-600 bg-clip-text text-transparent">TEAM</span>
@@ -145,7 +142,6 @@
       Selamat datang di ranah GMG Team—ekosistem Roblox tempat kreativitas tanpa batas, koleksi outfit kustom eksklusif, dan solidaritas main bareng menyatu. Kami memanggil kamu untuk menjadi bagian dari keluarga besar kami!
     </p>
 
-    <!-- LIVE DISCORD STATUS BADGE -->
     <div class="flex items-center justify-center gap-2.5 mb-10" data-aos="fade-up" data-aos-delay="450">
       <div class="relative flex h-2.5 w-2.5">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -156,21 +152,12 @@
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-sm mx-auto sm:max-w-none" data-aos="fade-up" data-aos-delay="500">
       <a href="https://discord.gg/u7vfwQmcB6" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-200 transition-all border border-white shadow-[0_0_25px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 font-gaming"><span>JOIN DISCORD</span></a>
-      
-      <!-- TOMBOL BUKA MENU SALIN LINK -->
-      <button onclick="openCopyModal()" class="w-full sm:w-auto px-8 py-4 bg-zinc-900 text-white font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-800 transition-all border border-zinc-700 shadow-[0_0_25px_rgba(0,0,0,0.5)] flex items-center justify-center gap-2 font-gaming cursor-pointer group">
-        <span>COPY LINK PENTING</span>
-        <svg class="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-      </button>
-
       <a href="https://tiktok.com/@gokilteam26" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-200 transition-all border border-white shadow-[0_0_25px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 font-gaming"><span>FOLLOW TIKTOK</span></a>
     </div>
   </section>
 
-  <!-- PENAMPUNG GALERI -->
+  <!-- PENAMPUNG GALERI & KALENDER -->
   <div id="galeri-container" data-aos="fade-up" data-aos-duration="1000"></div>
-
-  <!-- PENAMPUNG KALENDER -->
   <div id="kalender-container" data-aos="fade-up" data-aos-duration="1000"></div>
 
   <!-- Section Daftar Karya -->
@@ -192,7 +179,7 @@
           <h4 class="font-gaming text-lg font-bold text-white mb-2 uppercase tracking-wide">GMG DISTRICT // ABSTRACT WORLD</h4>
           <p class="text-zinc-500 text-xs md:text-sm mb-6 leading-relaxed">Map hangout dan mabar komunitas. Dipenuhi dengan spot nongkrong yang dikelilingi karya seni komunitas.</p>
         </div>
-        <button onclick="openMapModal()" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors cursor-pointer text-left w-fit relative z-10">PLAY ON ROBLOX &rarr;</button>
+        <button onclick="openMapModal()" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors cursor-pointer text-left w-fit relative z-10">BUKA MENU MAP &rarr;</button>
       </div>
       
       <div class="p-6 bg-zinc-950/40 border border-zinc-900 hover:border-zinc-500 transition-all duration-300 relative group flex flex-col justify-between" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
@@ -203,7 +190,7 @@
           <h4 class="font-gaming text-lg font-bold text-white mb-2 uppercase tracking-wide">GMG TEAM OFF-GRID OUTFIT</h4>
           <p class="text-zinc-500 text-xs md:text-sm mb-6 leading-relaxed">Merchandise virtual resmi dari GMG Team di catalog Roblox. Mengusung gaya busana grey-dark camo.</p>
         </div>
-        <button onclick="openCatalogModal()" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors cursor-pointer text-left w-fit relative z-10">CATALOG STORE &rarr;</button>
+        <button onclick="openCatalogModal()" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors cursor-pointer text-left w-fit relative z-10">BUKA MENU KATALOG &rarr;</button>
       </div>
     </div>
   </section>
@@ -237,57 +224,58 @@
     </div>
   </section>
 
-  <!-- Modal Popups (Map & Store) -->
+  <!-- ===================================================== -->
+  <!-- MODAL POPUPS DENGAN TOMBOL SALIN DI DALAMNYA          -->
+  <!-- ===================================================== -->
+
+  <!-- Modal Map (Dilengkapi Tombol Buka & Tombol Salin) -->
   <div id="mapModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
     <div class="bg-zinc-950 border border-zinc-800 p-6 md:p-8 max-w-md w-full relative">
       <button onclick="closeMapModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white">✕</button>
-      <h3 class="font-gaming text-xl font-black text-white uppercase mb-4">GMG DISTRICT WORLD</h3>
+      <h3 class="font-gaming text-xl font-black text-white uppercase mb-2">GMG DISTRICT WORLD</h3>
+      <p class="text-zinc-500 text-xs mb-6">Pilih tautan untuk langsung berkunjung atau salin link-nya.</p>
+      
       <div class="flex flex-col gap-3 font-gaming text-xs">
-        <a href="https://www.roblox.com/share/g/182046632" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between"><span>🏰 LINK COMMUNITY</span><span>&rarr;</span></a>
-        <a href="https://www.roblox.com/share?code=26ce82bbbb7cef438b647d192673e126&type=ExperienceDetails&stamp=1790535469860" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between"><span>🎮 LINK MAP ROBLOX</span><span>&rarr;</span></a>
+        <!-- Link Community -->
+        <div class="flex gap-2">
+          <a href="https://www.roblox.com/share/g/182046632" target="_blank" class="flex-1 p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center"><span>🏰 LINK COMMUNITY</span><span>&rarr;</span></a>
+          <button onclick="copyToClipboard('https://www.roblox.com/share/g/182046632', this)" class="px-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 font-mono text-[10px]">COPY</button>
+        </div>
+
+        <!-- Link Map Roblox -->
+        <div class="flex gap-2">
+          <a href="https://www.roblox.com/share?code=26ce82bbbb7cef438b647d192673e126&type=ExperienceDetails&stamp=1790535469860" target="_blank" class="flex-1 p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center"><span>🎮 LINK MAP ROBLOX</span><span>&rarr;</span></a>
+          <button onclick="copyToClipboard('https://www.roblox.com/share?code=26ce82bbbb7cef438b647d192673e126&type=ExperienceDetails&stamp=1790535469860', this)" class="px-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 font-mono text-[10px]">COPY</button>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Modal Katalog Store (Dilengkapi Tombol Buka & Tombol Salin) -->
   <div id="catalogModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
     <div class="bg-zinc-950 border border-zinc-800 p-6 md:p-8 max-w-md w-full relative">
       <button onclick="closeCatalogModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white">✕</button>
-      <h3 class="font-gaming text-xl font-black text-white uppercase mb-4">GMG STORE COLLECTION</h3>
-      <div class="flex flex-col gap-3 font-gaming text-xs">
-        <a href="https://www.roblox.com/catalog/112872288786373/Deeys-Hoodie-Grey-x-Camo-Gokil" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between"><span>🧥 GMG HOODIE GREY</span><span>&rarr;</span></a>
-        <a href="https://www.roblox.com/catalog/102968617404883/Deeys-Hoodie-Dark-Grey-x-Camo-Gokil" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between"><span>🧥 GMG HOODIE DARK</span><span>&rarr;</span></a>
-        <a href="https://www.roblox.com/catalog/122535967549083/GMG-Gokil-pants" target="_blank" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between"><span>👖 GMG PANTS</span><span>&rarr;</span></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Salin Link Cepat (Quick Copy Menu) -->
-  <div id="copyModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
-    <div class="bg-zinc-950 border border-zinc-800 p-6 md:p-8 max-w-md w-full relative">
-      <button onclick="closeCopyModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white">✕</button>
-      <h3 class="font-gaming text-xl font-black text-white uppercase mb-2">SALIN LINK PENTING</h3>
-      <p class="text-zinc-500 text-xs mb-6">Klik tombol di bawah untuk menyalin tautan resmi GMG Team secara instan.</p>
+      <h3 class="font-gaming text-xl font-black text-white uppercase mb-2">GMG STORE COLLECTION</h3>
+      <p class="text-zinc-500 text-xs mb-6">Pilih outfit resmi atau salin link katalognya.</p>
       
       <div class="flex flex-col gap-3 font-gaming text-xs">
-        <button onclick="copyToClipboard('https://discord.gg/u7vfwQmcB6', this)" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center transition-colors cursor-pointer text-left">
-          <span class="truncate pr-2">💬 DISCORD COMMUNITY</span>
-          <span class="text-zinc-500 text-[10px] font-mono shrink-0 copy-status">COPY</span>
-        </button>
+        <!-- Hoodie Grey -->
+        <div class="flex gap-2">
+          <a href="https://www.roblox.com/catalog/112872288786373/Deeys-Hoodie-Grey-x-Camo-Gokil" target="_blank" class="flex-1 p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center"><span>🧥 HOODIE GREY</span><span>&rarr;</span></a>
+          <button onclick="copyToClipboard('https://www.roblox.com/catalog/112872288786373/Deeys-Hoodie-Grey-x-Camo-Gokil', this)" class="px-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 font-mono text-[10px]">COPY</button>
+        </div>
 
-        <button onclick="copyToClipboard('https://tiktok.com/@gokilteam26', this)" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center transition-colors cursor-pointer text-left">
-          <span class="truncate pr-2">🎵 TIKTOK OFFICIAL</span>
-          <span class="text-zinc-500 text-[10px] font-mono shrink-0 copy-status">COPY</span>
-        </button>
+        <!-- Hoodie Dark -->
+        <div class="flex gap-2">
+          <a href="https://www.roblox.com/catalog/102968617404883/Deeys-Hoodie-Dark-Grey-x-Camo-Gokil" target="_blank" class="flex-1 p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center"><span>🧥 HOODIE DARK</span><span>&rarr;</span></a>
+          <button onclick="copyToClipboard('https://www.roblox.com/catalog/102968617404883/Deeys-Hoodie-Dark-Grey-x-Camo-Gokil', this)" class="px-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 font-mono text-[10px]">COPY</button>
+        </div>
 
-        <button onclick="copyToClipboard('https://www.roblox.com/share?code=26ce82bbbb7cef438b647d192673e126&type=ExperienceDetails&stamp=1790535469860', this)" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center transition-colors cursor-pointer text-left">
-          <span class="truncate pr-2">🎮 MAP GMG DISTRICT</span>
-          <span class="text-zinc-500 text-[10px] font-mono shrink-0 copy-status">COPY</span>
-        </button>
-
-        <button onclick="copyToClipboard('https://www.roblox.com/catalog/112872288786373/Deeys-Hoodie-Grey-x-Camo-Gokil', this)" class="p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center transition-colors cursor-pointer text-left">
-          <span class="truncate pr-2">🧥 KATALOG OUTFIT (HOODIE)</span>
-          <span class="text-zinc-500 text-[10px] font-mono shrink-0 copy-status">COPY</span>
-        </button>
+        <!-- Pants -->
+        <div class="flex gap-2">
+          <a href="https://www.roblox.com/catalog/122535967549083/GMG-Gokil-pants" target="_blank" class="flex-1 p-3.5 bg-zinc-900 text-white font-bold uppercase hover:bg-zinc-800 border border-zinc-800 flex justify-between items-center"><span>👖 GMG PANTS</span><span>&rarr;</span></a>
+          <button onclick="copyToClipboard('https://www.roblox.com/catalog/122535967549083/GMG-Gokil-pants', this)" class="px-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 font-mono text-[10px]">COPY</button>
+        </div>
       </div>
     </div>
   </div>
@@ -302,11 +290,11 @@
     <svg class="w-5 h-5 relative z-10 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
   </button>
 
-  <!-- Library Eksternal (AOS & 3D Tilt) -->
+  <!-- Library Eksternal -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   
-  <!-- Script Utama Kita -->
+  <!-- Script Utama -->
   <script src="script.js"></script>
 </body>
-</html>
+      </html>
