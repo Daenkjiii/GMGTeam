@@ -30,62 +30,46 @@
         linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
     }
 
-    /* CSS: Animasi Scroll Snap Kalender & Galeri */
-    .slider-snap {
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .slider-snap-item { scroll-snap-align: start; }
+    /* Scroll Snap */
+    .slider-snap { scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
     .slider-snap::-webkit-scrollbar { display: none; }
+    .slider-snap-item { scroll-snap-align: start; }
 
-    /* IDE 3: CSS Animasi Glitch Title */
+    /* Animasi Glitch Title */
     .glitch-text { position: relative; display: inline-block; }
     .glitch-text::before, .glitch-text::after {
-      content: attr(data-text);
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.8;
+      content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.8;
     }
-    .glitch-text::before {
-      color: #0ff; z-index: -1; animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
-    }
-    .glitch-text::after {
-      color: #f0f; z-index: -2; animation: glitch-anim-2 3s infinite linear alternate-reverse;
-    }
-    @keyframes glitch-anim-1 {
-      0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); }
-      20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -1px); }
-      40% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); }
-      60% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); }
-      80% { clip-path: inset(10% 0 70% 0); transform: translate(-1px, 1px); }
-      100% { clip-path: inset(30% 0 50% 0); transform: translate(1px, -1px); }
-    }
-    @keyframes glitch-anim-2 {
-      0% { clip-path: inset(10% 0 60% 0); transform: translate(2px, -1px); }
-      20% { clip-path: inset(30% 0 20% 0); transform: translate(-2px, 2px); }
-      40% { clip-path: inset(70% 0 10% 0); transform: translate(2px, 1px); }
-      60% { clip-path: inset(20% 0 50% 0); transform: translate(-1px, -2px); }
-      80% { clip-path: inset(50% 0 30% 0); transform: translate(1px, 2px); }
-      100% { clip-path: inset(5% 0 80% 0); transform: translate(-2px, -1px); }
-    }
+    .glitch-text::before { color: #0ff; z-index: -1; animation: glitch-anim-1 2.5s infinite linear alternate-reverse; }
+    .glitch-text::after { color: #f0f; z-index: -2; animation: glitch-anim-2 3s infinite linear alternate-reverse; }
+    @keyframes glitch-anim-1 { 0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); } 20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -1px); } 40% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); } 60% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); } 80% { clip-path: inset(10% 0 70% 0); transform: translate(-1px, 1px); } 100% { clip-path: inset(30% 0 50% 0); transform: translate(1px, -1px); } }
+    @keyframes glitch-anim-2 { 0% { clip-path: inset(10% 0 60% 0); transform: translate(2px, -1px); } 20% { clip-path: inset(30% 0 20% 0); transform: translate(-2px, 2px); } 40% { clip-path: inset(70% 0 10% 0); transform: translate(2px, 1px); } 60% { clip-path: inset(20% 0 50% 0); transform: translate(-1px, -2px); } 80% { clip-path: inset(50% 0 30% 0); transform: translate(1px, 2px); } 100% { clip-path: inset(5% 0 80% 0); transform: translate(-2px, -1px); } }
 
-    /* IDE 5: CSS Floating Partikel (Logo) */
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(10deg); }
-    }
-    @keyframes float-reverse {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-25px) rotate(-15deg); }
-    }
+    /* Floating Logo */
+    @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(10deg); } }
+    @keyframes float-reverse { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-25px) rotate(-15deg); } }
     .animate-float { animation: float 6s ease-in-out infinite; }
     .animate-float-reverse { animation: float-reverse 7s ease-in-out infinite; }
     .anim-delay-2000 { animation-delay: 2s; }
     .anim-delay-4000 { animation-delay: 4s; }
+
+    /* Custom Animations (Preloader & Radar) */
+    @keyframes bar-loading { 0% { width: 0%; } 30% { width: 40%; } 70% { width: 80%; } 100% { width: 100%; } }
+    @keyframes radar-scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
   </style>
 </head>
 <body class="bg-abstract grid-pattern text-zinc-300 min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
+
+  <!-- IDE 1: GAMING PRELOADER (Layar Loading) -->
+  <div id="preloader" class="fixed inset-0 z-[9999] bg-zinc-950 flex flex-col items-center justify-center transition-opacity duration-700">
+    <img src="logo.png" class="w-24 h-24 sm:w-32 sm:h-32 animate-pulse mb-8 object-contain filter drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" alt="Loading Logo">
+    <div class="font-mono text-[10px] text-zinc-500 tracking-[0.3em] uppercase flex flex-col items-center gap-3">
+      <span class="animate-pulse">CONNECTING TO GMG SERVER...</span>
+      <div class="w-48 sm:w-64 h-[2px] bg-zinc-900 overflow-hidden relative">
+        <div class="absolute top-0 left-0 h-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.8)] animate-[bar-loading_1.5s_ease-in-out_forwards]"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- Navbar / Header -->
   <header class="border-b border-zinc-900/80 backdrop-blur-md sticky top-0 z-50 bg-black/80">
@@ -112,7 +96,7 @@
   <!-- Hero Section -->
   <section class="max-w-5xl mx-auto px-6 pt-12 pb-20 text-center flex flex-col items-center justify-center relative min-h-[85vh]">
     
-    <!-- IDE 5: Efek Visual Floating Logo GMG Transparan di Belakang (Background) -->
+    <!-- Floating Logo Transparan -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
       <img src="logo.png" class="absolute top-10 left-10 w-24 h-24 opacity-[0.06] animate-float filter grayscale blur-[1px]">
       <img src="logo.png" class="absolute top-1/3 right-12 w-40 h-40 opacity-[0.04] animate-float-reverse anim-delay-2000 filter grayscale blur-[2px]">
@@ -134,15 +118,24 @@
       </div>
     </div>
 
-    <!-- IDE 3: Efek Glitch pada Judul -->
+    <!-- Judul Glitch -->
     <h1 class="font-gaming text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight mb-6 leading-tight w-full text-center" data-aos="fade-up" data-aos-delay="300">
       <span class="glitch-text" data-text="GOKIL MANA GOKIL">GOKIL MANA GOKIL</span> <br>
       <span class="bg-gradient-to-b from-white via-zinc-200 to-zinc-600 bg-clip-text text-transparent">TEAM</span>
     </h1>
     
-    <p class="text-zinc-400 text-xs md:text-sm max-w-2xl mx-auto mb-10 leading-relaxed font-medium px-4" data-aos="fade-up" data-aos-delay="400">
+    <p class="text-zinc-400 text-xs md:text-sm max-w-2xl mx-auto mb-6 leading-relaxed font-medium px-4" data-aos="fade-up" data-aos-delay="400">
       Selamat datang di ranah GMG Team—ekosistem Roblox tempat kreativitas tanpa batas, koleksi outfit kustom eksklusif, dan solidaritas main bareng menyatu. Kami memanggil kamu untuk menjadi bagian dari keluarga besar kami!
     </p>
+
+    <!-- IDE 4: LIVE DISCORD STATUS BADGE -->
+    <div class="flex items-center justify-center gap-2.5 mb-10" data-aos="fade-up" data-aos-delay="450">
+      <div class="relative flex h-2.5 w-2.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
+      </div>
+      <span class="text-[10px] font-mono font-bold text-emerald-400 tracking-[0.2em] uppercase">SERVER ACTIVE - CONNECT NOW</span>
+    </div>
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-sm mx-auto sm:max-w-none" data-aos="fade-up" data-aos-delay="500">
       <a href="https://discord.gg/u7vfwQmcB6" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-extrabold text-xs tracking-widest uppercase hover:bg-zinc-200 transition-all border border-white shadow-[0_0_25px_rgba(255,255,255,0.15)] flex items-center justify-center gap-2 font-gaming"><span>JOIN DISCORD</span></a>
@@ -150,13 +143,13 @@
     </div>
   </section>
 
-  <!-- PENAMPUNG GALERI (Ditambahkan efek AOS Animasi Muncul) -->
+  <!-- PENAMPUNG GALERI -->
   <div id="galeri-container" data-aos="fade-up" data-aos-duration="1000"></div>
 
-  <!-- PENAMPUNG KALENDER (Ditambahkan efek AOS Animasi Muncul) -->
+  <!-- PENAMPUNG KALENDER -->
   <div id="kalender-container" data-aos="fade-up" data-aos-duration="1000"></div>
 
-  <!-- Section Daftar Karya -->
+  <!-- Section Daftar Karya (3D Tilt) -->
   <section id="karya" class="max-w-6xl mx-auto px-6 py-20 border-t border-zinc-900/60" data-aos="fade-up" data-aos-duration="1000">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
       <div>
@@ -167,7 +160,6 @@
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- IDE 4: 3D Tilt Effect pada Kartu Map dengan atribut 'data-tilt' -->
       <div class="p-6 bg-zinc-950/40 border border-zinc-900 hover:border-zinc-500 transition-all duration-300 relative group flex flex-col justify-between" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
         <div>
           <div class="w-full aspect-video bg-zinc-900 border border-zinc-800 mb-5 overflow-hidden relative">
@@ -179,7 +171,6 @@
         <button onclick="openMapModal()" class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold text-white uppercase tracking-widest hover:text-zinc-400 transition-colors cursor-pointer text-left w-fit relative z-10">PLAY ON ROBLOX &rarr;</button>
       </div>
       
-      <!-- IDE 4: 3D Tilt Effect pada Kartu Outfit dengan atribut 'data-tilt' -->
       <div class="p-6 bg-zinc-950/40 border border-zinc-900 hover:border-zinc-500 transition-all duration-300 relative group flex flex-col justify-between" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
         <div>
           <div class="w-full aspect-video bg-zinc-900 border border-zinc-800 mb-5 overflow-hidden relative">
@@ -250,18 +241,22 @@
     &copy; 2026 GMG TEAM ROBLOX.
   </footer>
 
+  <!-- IDE 5: TOMBOL BACK TO TOP (RADAR STYLE) -->
+  <button id="backToTop" class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-black border border-white/20 text-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 hover:border-cyan-500 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)] group overflow-hidden" onclick="scrollToTop()">
+    <!-- Garis Scanning Radar -->
+    <div class="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent h-full w-full -translate-y-full group-hover:animate-[radar-scan_1.5s_linear_infinite]"></div>
+    <svg class="w-5 h-5 relative z-10 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+  </button>
+
   <!-- Script JS External AOS & 3D Tilt -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   
   <script src="script.js"></script>
   <script>
-    // Inisialisasi AOS (Animasi Scroll) saat halaman dimuat
+    // Inisialisasi AOS saat halaman dimuat
     document.addEventListener('DOMContentLoaded', function() {
-      AOS.init({
-        once: true, // Animasi hanya berjalan 1 kali saat di-scroll ke bawah
-        offset: 50, // Muncul sedikit lebih cepat sebelum elemen masuk ke layar
-      });
+      AOS.init({ once: true, offset: 50 });
     });
   </script>
 </body>
