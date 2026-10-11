@@ -1,28 +1,40 @@
 // ==========================================
-// 1. SISTEM PRELOADER (Layar Loading Gim)
+// 1. INISIALISASI AOS (Animasi Scroll)
 // ==========================================
-// Layar loading diatur hilang setelah 1.5 detik agar progress bar selesai
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const preloader = document.getElementById('preloader');
-    preloader.style.opacity = '0'; // Memudar perlahan
-    setTimeout(() => {
-      preloader.style.display = 'none'; // Menghilangkan elemen dari DOM
-    }, 700); // Waktu transisi CSS selesai
-  }, 1500); 
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof AOS !== 'undefined') {
+    AOS.init({ once: true, offset: 50 });
+  }
 });
 
 // ==========================================
-// 2. BACK TO TOP (Tombol Radar HUD)
+// 2. SISTEM PRELOADER (Layar Loading Gim)
+// ==========================================
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const preloader = document.getElementById('preloader');
+    if(preloader) {
+      preloader.style.opacity = '0'; // Memudar perlahan
+      setTimeout(() => {
+        preloader.style.display = 'none'; // Menghilangkan elemen
+      }, 700);
+    }
+  }, 1500); // Tampil selama 1.5 detik
+});
+
+// ==========================================
+// 3. BACK TO TOP (Tombol Radar HUD)
 // ==========================================
 window.addEventListener('scroll', () => {
   const backToTopBtn = document.getElementById('backToTop');
-  if (window.scrollY > 400) {
-    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-    backToTopBtn.classList.add('opacity-100', 'cursor-pointer');
-  } else {
-    backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
-    backToTopBtn.classList.remove('opacity-100', 'cursor-pointer');
+  if (backToTopBtn) {
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+      backToTopBtn.classList.add('opacity-100', 'cursor-pointer');
+    } else {
+      backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      backToTopBtn.classList.remove('opacity-100', 'cursor-pointer');
+    }
   }
 });
 
@@ -31,7 +43,7 @@ function scrollToTop() {
 }
 
 // ==========================================
-// 3. FUNGSI MODAL (Popups untuk Map & Store)
+// 4. FUNGSI MODAL (Popups Map & Store)
 // ==========================================
 function openMapModal() { document.getElementById('mapModal').classList.remove('hidden'); }
 function closeMapModal() { document.getElementById('mapModal').classList.add('hidden'); }
@@ -46,7 +58,7 @@ window.onclick = function(event) {
 }
 
 // ==========================================
-// 4. FUNGSI SLIDER OTOMATIS (Galeri & Event)
+// 5. FUNGSI SLIDER OTOMATIS (Galeri & Event)
 // ==========================================
 function initAutoSlider(elementId, intervalTime = 5000) {
   const slider = document.getElementById(elementId);
@@ -64,7 +76,7 @@ function initAutoSlider(elementId, intervalTime = 5000) {
 }
 
 // ==========================================
-// 5. NAVIGASI KALENDER (Bulan Berikut/Sebelum)
+// 6. NAVIGASI KALENDER
 // ==========================================
 function nextMonth() {
   const slider = document.getElementById('calendarSlider');
@@ -76,24 +88,29 @@ function prevMonth() {
 }
 
 // ==========================================
-// 6. MEMUAT FILE EKSTERNAL & REFRESH ANIMASI
+// 7. MEMUAT FILE EKSTERNAL (Galeri & Kalender)
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   const loadGaleri = fetch('galeri.html')
     .then(response => response.text())
     .then(data => {
-      document.getElementById('galeri-container').innerHTML = data;
-      initAutoSlider('gallerySlider', 5000);
-      initAutoSlider('eventSlider', 5000);
-      initAutoSlider('collabSlider', 5000);
+      const container = document.getElementById('galeri-container');
+      if(container) {
+        container.innerHTML = data;
+        initAutoSlider('gallerySlider', 5000);
+        initAutoSlider('eventSlider', 5000);
+        initAutoSlider('collabSlider', 5000);
+      }
     }).catch(error => console.error('Gagal memuat galeri:', error));
 
   const loadKalender = fetch('kalender.html')
     .then(response => response.text())
     .then(data => {
-      document.getElementById('kalender-container').innerHTML = data;
+      const container = document.getElementById('kalender-container');
+      if(container) container.innerHTML = data;
     }).catch(error => console.error('Gagal memuat kalender:', error));
 
+  // Refresh animasi pudar (AOS) setelah HTML tambahan dimuat
   Promise.all([loadGaleri, loadKalender]).then(() => {
     if (typeof AOS !== 'undefined') AOS.refresh();
   });
