@@ -1,5 +1,5 @@
 // ==========================================
-// 1. INISIALISASI AOS & TILT
+// 1. INISIALISASI AOS
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof AOS !== 'undefined') {
@@ -57,38 +57,60 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 // ==========================================
-// 3. FUNGSI NAVIGASI KALENDER (SOLUSI BULAN HILANG)
+// 3. FUNGSI SLIDER OTOMATIS (GALERI, EVENT, COLLAB)
+// ==========================================
+function initAutoSlider(elementId, intervalTime = 5000) {
+  const slider = document.getElementById(elementId);
+  if (!slider) return;
+
+  // Hentikan interval lama jika ada agar tidak bentrok
+  if (slider.dataset.autoSliderInterval) {
+    clearInterval(parseInt(slider.dataset.autoSliderInterval));
+  }
+
+  const totalSlides = slider.children.length;
+  if (totalSlides <= 1) return;
+
+  const intervalId = setInterval(() => {
+    const firstChild = slider.firstElementChild;
+    const slideWidth = firstChild ? firstChild.getBoundingClientRect().width : slider.clientWidth;
+    if (slideWidth <= 0) return;
+
+    let currentSlide = Math.round(slider.scrollLeft / slideWidth);
+    let nextSlide = (currentSlide + 1) % totalSlides;
+
+    slider.scrollTo({
+      left: nextSlide * slideWidth,
+      behavior: 'smooth'
+    });
+  }, intervalTime);
+
+  slider.dataset.autoSliderInterval = intervalId;
+}
+
+// ==========================================
+// 4. NAVIGASI KALENDER BULAN
 // ==========================================
 function nextMonth() {
   const slider = document.getElementById('calendarSlider');
   if (slider) {
-    slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' });
+    const firstChild = slider.firstElementChild;
+    const slideWidth = firstChild ? firstChild.getBoundingClientRect().width : slider.clientWidth;
+    slider.scrollBy({ left: slideWidth, behavior: 'smooth' });
   }
 }
 
 function prevMonth() {
   const slider = document.getElementById('calendarSlider');
   if (slider) {
-    slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' });
-  }
-}
-
-function initAutoSlider(elementId, intervalTime = 5000) {
-  const slider = document.getElementById(elementId);
-  if (!slider) return;
-  const totalSlides = slider.children.length;
-  if (totalSlides > 1) {
-    setInterval(() => {
-      const slideWidth = slider.clientWidth;
-      let currentSlide = Math.round(slider.scrollLeft / slideWidth);
-      let nextSlide = (currentSlide + 1) % totalSlides;
-      slider.scrollTo({ left: slideWidth * nextSlide, behavior: 'smooth' });
-    }, intervalTime);
+    const firstChild = slider.firstElementChild;
+    const slideWidth = firstChild ? firstChild.getBoundingClientRect().width : slider.clientWidth;
+    slider.scrollBy({ left: -slideWidth, behavior: 'smooth' });
   }
 }
 
 // ==========================================
-// 4. FUNGSI MODAL POPUP
+// 5. FUNGSI MODAL POPUP
 // ==========================================
 function openMapModal() {
   const modal = document.getElementById('mapModal');
@@ -110,7 +132,7 @@ function closeCatalogModal() {
   if (modal) modal.classList.add('hidden');
 }
 
-// Menutup modal jika area backdrop diklik
+// Menutup modal jika klik di luar area modal
 window.addEventListener('click', (event) => {
   const mapModal = document.getElementById('mapModal');
   const catalogModal = document.getElementById('catalogModal');
@@ -120,7 +142,7 @@ window.addEventListener('click', (event) => {
 });
 
 // ==========================================
-// 5. FUNGSI COPY TO CLIPBOARD
+// 6. FUNGSI COPY TO CLIPBOARD
 // ==========================================
 function copyToClipboard(text, buttonElement) {
   function showFeedback() {
@@ -165,7 +187,7 @@ function fallbackCopy(text) {
 }
 
 // ==========================================
-// 6. CONTROL BACK TO TOP (RADAR)
+// 7. CONTROL BACK TO TOP (RADAR)
 // ==========================================
 window.addEventListener('scroll', () => {
   const backToTopBtn = document.getElementById('backToTop');
@@ -185,11 +207,11 @@ function scrollToTop() {
 }
 
 // ==========================================
-// 7. MEMUAT MODUL GALERI & KALENDER
+// 8. MEMUAT MODUL GALERI & KALENDER
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   // Load File Galeri
-  fetch('galeri.html')
+  const loadGaleri = fetch('galeri.html')
     .then(res => {
       if (!res.ok) throw new Error('galeri.html not found');
       return res.text();
@@ -198,20 +220,32 @@ document.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById('galeri-container');
       if (container) {
         container.innerHTML = html;
+        // Inisialisasi KETIGA SLIDER yang ada di galeri.html
         initAutoSlider('gallerySlider', 5000);
+        initAutoSlider('eventSlider', 5000);
+        initAutoSlider('collabSlider', 5000);
       }
     })
     .catch(err => console.warn('Pemberitahuan Galeri:', err.message));
 
   // Load File Kalender
-  fetch('kalender.html')
+  const loadKalender = fetch('kalender.html')
     .then(res => {
       if (!res.ok) throw new Error('kalender.html not found');
       return res.text();
     })
     .then(html => {
       const container = document.getElementById('kalender-container');
-      if (container) container.innerHTML = html;
+      if (container) {
+        container.innerHTML = html;
+      }
     })
     .catch(err => console.warn('Pemberitahuan Kalender:', err.message));
+
+  // Refresh animasi AOS setelah semua modul HTML selesai dimuat
+  Promise.all([loadGaleri, loadKalender]).then(() => {
+    if (typeof AOS !== 'undefined') {
+      AOS.refresh();
+    }
+  });
 });
