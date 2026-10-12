@@ -1,14 +1,5 @@
 // ==========================================
-// 1. INISIALISASI AOS (ANIMASI SCROLL)
-// ==========================================
-document.addEventListener('DOMContentLoaded', () => {
-  if (typeof AOS !== 'undefined') {
-    AOS.init({ once: true, offset: 50 });
-  }
-});
-
-// ==========================================
-// 2. LOGIC PRELOADER (Minimalist AAA Style)
+// 1. LOGIC PRELOADER
 // ==========================================
 (function initPreloader() {
   let percent = 0;
@@ -26,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const interval = setInterval(() => {
-    percent += Math.floor(Math.random() * 6) + 3;
+    percent += Math.floor(Math.random() * 8) + 4;
     if (percent > 100) percent = 100;
 
     const formattedPercent = percent < 10 ? '0' + percent : percent;
@@ -49,25 +40,28 @@ document.addEventListener('DOMContentLoaded', () => {
           preloader.style.opacity = '0';
           setTimeout(() => {
             preloader.style.display = 'none';
-          }, 800);
+            // Pemicu ulang AOS setelah preloader hilang
+            if (typeof AOS !== 'undefined') {
+              AOS.init({ once: true, offset: 20 });
+              AOS.refresh();
+            }
+          }, 700);
         }
-      }, 350);
+      }, 200);
     }
-  }, 35);
+  }, 25);
 })();
 
 // ==========================================
-// 3. COUNTDOWN TIMER GIVEAWAY (SETIAP MINGGU 20:00 WIB)
+// 2. COUNTDOWN TIMER GIVEAWAY (MINGGU 20:00 WIB)
 // ==========================================
 function updateGiveawayCountdown() {
   const now = new Date();
   
-  // Target hari Minggu pukul 20:00 WIB
   let nextDraw = new Date();
   nextDraw.setDate(now.getDate() + ((7 - now.getDay()) % 7));
   nextDraw.setHours(20, 0, 0, 0);
 
-  // Jika hari ini Minggu dan sudah lewat jam 20:00, targetkan ke Minggu depan
   if (now > nextDraw) {
     nextDraw.setDate(nextDraw.getDate() + 7);
   }
@@ -94,7 +88,7 @@ setInterval(updateGiveawayCountdown, 1000);
 updateGiveawayCountdown();
 
 // ==========================================
-// 4. FUNGSI SLIDER OTOMATIS (GALERI, EVENT, COLLAB)
+// 3. FUNGSI SLIDER OTOMATIS
 // ==========================================
 function initAutoSlider(elementId, intervalTime = 5000) {
   const slider = document.getElementById(elementId);
@@ -125,7 +119,7 @@ function initAutoSlider(elementId, intervalTime = 5000) {
 }
 
 // ==========================================
-// 5. NAVIGASI KALENDER BULAN
+// 4. NAVIGASI KALENDER
 // ==========================================
 function nextMonth() {
   const slider = document.getElementById('calendarSlider');
@@ -146,7 +140,7 @@ function prevMonth() {
 }
 
 // ==========================================
-// 6. FUNGSI CONTROL MODAL POPUP (MAP, KATALOG, GIVEAWAY)
+// 5. CONTROL MODAL POPUP
 // ==========================================
 function openMapModal() {
   const modal = document.getElementById('mapModal');
@@ -178,7 +172,6 @@ function closeGiveawayModal() {
   if (modal) modal.classList.add('hidden');
 }
 
-// Menutup modal jika klik di luar area modal
 window.addEventListener('click', (event) => {
   const mapModal = document.getElementById('mapModal');
   const catalogModal = document.getElementById('catalogModal');
@@ -190,11 +183,106 @@ window.addEventListener('click', (event) => {
 });
 
 // ==========================================
-// 7. FUNGSI COPY TO CLIPBOARD
+// 6. COPY TO CLIPBOARD
 // ==========================================
 function copyToClipboard(text, buttonElement) {
   function showFeedback() {
     if (!buttonElement) return;
     const originalText = buttonElement.innerText;
     buttonElement.innerText = 'COPIED!';
-    buttonElement.style.color = '#06
+    buttonElement.style.color = '#06b6d4';
+    buttonElement.style.borderColor = '#06b6d4';
+
+    setTimeout(() => {
+      buttonElement.innerText = originalText;
+      buttonElement.style.color = '';
+      buttonElement.style.borderColor = '';
+    }, 2000);
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showFeedback).catch(() => {
+      fallbackCopy(text);
+      showFeedback();
+    });
+  } else {
+    fallbackCopy(text);
+    showFeedback();
+  }
+}
+
+function fallbackCopy(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position = "fixed";
+  textArea.style.left = "-999999px";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    document.execCommand('copy');
+  } catch (err) {
+    console.error('Fallback copy error:', err);
+  }
+  document.body.removeChild(textArea);
+}
+
+// ==========================================
+// 7. BACK TO TOP
+// ==========================================
+window.addEventListener('scroll', () => {
+  const backToTopBtn = document.getElementById('backToTop');
+  if (backToTopBtn) {
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+      backToTopBtn.classList.add('opacity-100', 'cursor-pointer');
+    } else {
+      backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      backToTopBtn.classList.remove('opacity-100', 'cursor-pointer');
+    }
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ==========================================
+// 8. MEMUAT MODUL GALERI & KALENDER
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const loadGaleri = fetch('galeri.html')
+    .then(res => {
+      if (!res.ok) throw new Error('galeri.html not found');
+      return res.text();
+    })
+    .then(html => {
+      const container = document.getElementById('galeri-container');
+      if (container) {
+        container.innerHTML = html;
+        initAutoSlider('gallerySlider', 5000);
+        initAutoSlider('eventSlider', 5000);
+        initAutoSlider('collabSlider', 5000);
+      }
+    })
+    .catch(err => console.warn('Pemberitahuan Galeri:', err.message));
+
+  const loadKalender = fetch('kalender.html')
+    .then(res => {
+      if (!res.ok) throw new Error('kalender.html not found');
+      return res.text();
+    })
+    .then(html => {
+      const container = document.getElementById('kalender-container');
+      if (container) {
+        container.innerHTML = html;
+      }
+    })
+    .catch(err => console.warn('Pemberitahuan Kalender:', err.message));
+
+  Promise.all([loadGaleri, loadKalender]).then(() => {
+    if (typeof AOS !== 'undefined') {
+      AOS.refresh();
+    }
+  });
+});
