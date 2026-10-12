@@ -1,10 +1,68 @@
 // ==========================================
-// LOGIC COUNTDOWN TIMER GIVEAWAY (SETIAP MINGGU JAM 20:00 WIB)
+// 1. INISIALISASI AOS (ANIMASI SCROLL)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof AOS !== 'undefined') {
+    AOS.init({ once: true, offset: 50 });
+  }
+});
+
+// ==========================================
+// 2. LOGIC PRELOADER (Minimalist AAA Style)
+// ==========================================
+(function initPreloader() {
+  let percent = 0;
+  const loadBar = document.getElementById('loadBar');
+  const loadPercent = document.getElementById('loadPercent');
+  const loadStatus = document.getElementById('loadStatus');
+  const preloader = document.getElementById('preloader');
+
+  const statuses = [
+    "INITIALIZING SYSTEM...",
+    "AUTHENTICATING DISCORD NODE...",
+    "LOADING COMMUNITY ASSETS...",
+    "PREPARING ENVIRONMENT...",
+    "WELCOME TO GMG TEAM"
+  ];
+
+  const interval = setInterval(() => {
+    percent += Math.floor(Math.random() * 6) + 3;
+    if (percent > 100) percent = 100;
+
+    const formattedPercent = percent < 10 ? '0' + percent : percent;
+
+    if (loadBar) loadBar.style.width = percent + '%';
+    if (loadPercent) loadPercent.innerText = formattedPercent;
+
+    if (loadStatus) {
+      if (percent < 25) loadStatus.innerText = statuses[0];
+      else if (percent < 50) loadStatus.innerText = statuses[1];
+      else if (percent < 75) loadStatus.innerText = statuses[2];
+      else if (percent < 95) loadStatus.innerText = statuses[3];
+      else loadStatus.innerText = statuses[4];
+    }
+
+    if (percent >= 100) {
+      clearInterval(interval);
+      setTimeout(() => {
+        if (preloader) {
+          preloader.style.opacity = '0';
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 800);
+        }
+      }, 350);
+    }
+  }, 35);
+})();
+
+// ==========================================
+// 3. COUNTDOWN TIMER GIVEAWAY (SETIAP MINGGU 20:00 WIB)
 // ==========================================
 function updateGiveawayCountdown() {
   const now = new Date();
   
-  // Menentukan target hari Minggu berikutnya pukul 20:00 WIB
+  // Target hari Minggu pukul 20:00 WIB
   let nextDraw = new Date();
   nextDraw.setDate(now.getDate() + ((7 - now.getDay()) % 7));
   nextDraw.setHours(20, 0, 0, 0);
@@ -32,13 +90,84 @@ function updateGiveawayCountdown() {
   if (sEl) sEl.innerText = seconds < 10 ? '0' + seconds : seconds;
 }
 
-// Jalankan timer setiap 1 detik
 setInterval(updateGiveawayCountdown, 1000);
 updateGiveawayCountdown();
 
 // ==========================================
-// CONTROL MODAL GIVEAWAY S&K
+// 4. FUNGSI SLIDER OTOMATIS (GALERI, EVENT, COLLAB)
 // ==========================================
+function initAutoSlider(elementId, intervalTime = 5000) {
+  const slider = document.getElementById(elementId);
+  if (!slider) return;
+
+  if (slider.dataset.autoSliderInterval) {
+    clearInterval(parseInt(slider.dataset.autoSliderInterval));
+  }
+
+  const totalSlides = slider.children.length;
+  if (totalSlides <= 1) return;
+
+  const intervalId = setInterval(() => {
+    const firstChild = slider.firstElementChild;
+    const slideWidth = firstChild ? firstChild.getBoundingClientRect().width : slider.clientWidth;
+    if (slideWidth <= 0) return;
+
+    let currentSlide = Math.round(slider.scrollLeft / slideWidth);
+    let nextSlide = (currentSlide + 1) % totalSlides;
+
+    slider.scrollTo({
+      left: nextSlide * slideWidth,
+      behavior: 'smooth'
+    });
+  }, intervalTime);
+
+  slider.dataset.autoSliderInterval = intervalId;
+}
+
+// ==========================================
+// 5. NAVIGASI KALENDER BULAN
+// ==========================================
+function nextMonth() {
+  const slider = document.getElementById('calendarSlider');
+  if (slider) {
+    const firstChild = slider.firstElementChild;
+    const slideWidth = firstChild ? firstChild.getBoundingClientRect().width : slider.clientWidth;
+    slider.scrollBy({ left: slideWidth, behavior: 'smooth' });
+  }
+}
+
+function prevMonth() {
+  const slider = document.getElementById('calendarSlider');
+  if (slider) {
+    const firstChild = slider.firstElementChild;
+    const slideWidth = firstChild ? firstChild.getBoundingClientRect().width : slider.clientWidth;
+    slider.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+  }
+}
+
+// ==========================================
+// 6. FUNGSI CONTROL MODAL POPUP (MAP, KATALOG, GIVEAWAY)
+// ==========================================
+function openMapModal() {
+  const modal = document.getElementById('mapModal');
+  if (modal) modal.classList.remove('hidden');
+}
+
+function closeMapModal() {
+  const modal = document.getElementById('mapModal');
+  if (modal) modal.classList.add('hidden');
+}
+
+function openCatalogModal() {
+  const modal = document.getElementById('catalogModal');
+  if (modal) modal.classList.remove('hidden');
+}
+
+function closeCatalogModal() {
+  const modal = document.getElementById('catalogModal');
+  if (modal) modal.classList.add('hidden');
+}
+
 function openGiveawayModal() {
   const modal = document.getElementById('giveawayModal');
   if (modal) modal.classList.remove('hidden');
@@ -49,8 +178,23 @@ function closeGiveawayModal() {
   if (modal) modal.classList.add('hidden');
 }
 
-// Tutup modal jika area luar diklik
+// Menutup modal jika klik di luar area modal
 window.addEventListener('click', (event) => {
+  const mapModal = document.getElementById('mapModal');
+  const catalogModal = document.getElementById('catalogModal');
   const giveawayModal = document.getElementById('giveawayModal');
+  
+  if (event.target === mapModal) closeMapModal();
+  if (event.target === catalogModal) closeCatalogModal();
   if (event.target === giveawayModal) closeGiveawayModal();
 });
+
+// ==========================================
+// 7. FUNGSI COPY TO CLIPBOARD
+// ==========================================
+function copyToClipboard(text, buttonElement) {
+  function showFeedback() {
+    if (!buttonElement) return;
+    const originalText = buttonElement.innerText;
+    buttonElement.innerText = 'COPIED!';
+    buttonElement.style.color = '#06
