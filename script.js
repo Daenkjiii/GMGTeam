@@ -8,18 +8,49 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ==========================================
-// 2. SISTEM PRELOADER (Layar Loading Gim)
+// 2. SISTEM PRELOADER (Gaya AAA Minimalist)
 // ==========================================
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    const preloader = document.getElementById('preloader');
-    if(preloader) {
-      preloader.style.opacity = '0';
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 700);
+  const preloader = document.getElementById('preloader');
+  const percentText = document.getElementById('preloader-percent');
+  const statusText = document.getElementById('preloader-status-text');
+  const progressBar = document.getElementById('preloader-bar');
+
+  if (!preloader) return;
+
+  let progress = 0;
+  const statuses = [
+    "INITIALIZING SYSTEM...",
+    "AUTHENTICATING DISCORD NODE...",
+    "LOADING COMMUNITY ASSETS...",
+    "WELCOME TO GMG TEAM"
+  ];
+
+  // Animasi hitungan persentase dinamis
+  const interval = setInterval(() => {
+    progress += Math.floor(Math.random() * 12) + 6;
+    if (progress > 100) progress = 100;
+
+    if (percentText) percentText.innerText = `${progress}%`;
+    if (progressBar) progressBar.style.width = `${progress}%`;
+
+    if (statusText) {
+      if (progress < 30) statusText.innerText = statuses[0];
+      else if (progress < 65) statusText.innerText = statuses[1];
+      else if (progress < 90) statusText.innerText = statuses[2];
+      else statusText.innerText = statuses[3];
     }
-  }, 1500); 
+
+    if (progress >= 100) {
+      clearInterval(interval);
+      setTimeout(() => {
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 700);
+      }, 400);
+    }
+  }, 70);
 });
 
 // ==========================================
