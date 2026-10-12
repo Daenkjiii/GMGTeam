@@ -1,5 +1,5 @@
 // ==========================================
-// 1. LOGIC PRELOADER
+// 1. LOGIC PRELOADER & AOS INITIALIZATION
 // ==========================================
 (function initPreloader() {
   let percent = 0;
@@ -40,7 +40,7 @@
           preloader.style.opacity = '0';
           setTimeout(() => {
             preloader.style.display = 'none';
-            // Pemicu ulang AOS setelah preloader hilang
+            // Trigger AOS setelah preloader selesai menghilang
             if (typeof AOS !== 'undefined') {
               AOS.init({ once: true, offset: 20 });
               AOS.refresh();
@@ -53,7 +53,7 @@
 })();
 
 // ==========================================
-// 2. COUNTDOWN TIMER GIVEAWAY (MINGGU 20:00 WIB)
+// 2. COUNTDOWN TIMER GIVEAWAY (SETIAP MINGGU 20:00 WIB)
 // ==========================================
 function updateGiveawayCountdown() {
   const now = new Date();
@@ -88,7 +88,7 @@ setInterval(updateGiveawayCountdown, 1000);
 updateGiveawayCountdown();
 
 // ==========================================
-// 3. FUNGSI SLIDER OTOMATIS
+// 3. FUNGSI SLIDER OTOMATIS (GALERI, EVENT, COLLAB)
 // ==========================================
 function initAutoSlider(elementId, intervalTime = 5000) {
   const slider = document.getElementById(elementId);
@@ -119,7 +119,7 @@ function initAutoSlider(elementId, intervalTime = 5000) {
 }
 
 // ==========================================
-// 4. NAVIGASI KALENDER
+// 4. NAVIGASI KALENDER BULAN
 // ==========================================
 function nextMonth() {
   const slider = document.getElementById('calendarSlider');
@@ -140,7 +140,7 @@ function prevMonth() {
 }
 
 // ==========================================
-// 5. CONTROL MODAL POPUP
+// 5. CONTROL MODAL POPUP (MAP, KATALOG, GIVEAWAY)
 // ==========================================
 function openMapModal() {
   const modal = document.getElementById('mapModal');
@@ -183,7 +183,7 @@ window.addEventListener('click', (event) => {
 });
 
 // ==========================================
-// 6. COPY TO CLIPBOARD
+// 6. FUNGSI COPY TO CLIPBOARD
 // ==========================================
 function copyToClipboard(text, buttonElement) {
   function showFeedback() {
@@ -228,7 +228,7 @@ function fallbackCopy(text) {
 }
 
 // ==========================================
-// 7. BACK TO TOP
+// 7. CONTROL BACK TO TOP (RADAR)
 // ==========================================
 window.addEventListener('scroll', () => {
   const backToTopBtn = document.getElementById('backToTop');
