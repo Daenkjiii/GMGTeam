@@ -151,6 +151,7 @@
         </div>
       </a>
       <nav class="flex items-center gap-4 md:gap-6 text-xs md:text-sm font-bold tracking-wider uppercase">
+        <a href="#giveaway-section" class="text-yellow-400 hover:text-yellow-300 transition-colors">// GIVEAWAY</a>
         <a href="#galeri-container" class="text-zinc-400 hover:text-white transition-colors">// GALERI</a>
         <a href="#kalender-container" class="text-zinc-400 hover:text-white transition-colors">// EVENT</a>
         <a href="#karya" class="text-zinc-400 hover:text-white transition-colors">// KARYA</a>
@@ -160,7 +161,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="max-w-5xl mx-auto px-6 pt-12 pb-20 text-center flex flex-col items-center justify-center relative min-h-[85vh]">
+  <section class="max-w-5xl mx-auto px-6 pt-12 pb-16 text-center flex flex-col items-center justify-center relative min-h-[80vh]">
     <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
       <img src="logo.png" class="absolute top-10 left-10 w-24 h-24 opacity-[0.05] animate-float filter grayscale blur-[1px]" onerror="this.onerror=null; this.style.display='none'">
       <img src="logo.png" class="absolute top-1/3 right-12 w-36 h-36 opacity-[0.04] animate-float-reverse anim-delay-2000 filter grayscale blur-[2px]" onerror="this.onerror=null; this.style.display='none'">
@@ -208,7 +209,68 @@
     </div>
   </section>
 
-  <!-- CONTAINER DINAMIS -->
+  <!-- SECTION WIDGET GIVEAWAY (DIPOSISIKAN TEPAT DI ATAS GALERI) -->
+  <section id="giveaway-section" class="max-w-6xl mx-auto px-6 py-10 border-t border-zinc-900/60 relative" data-aos="fade-up" data-aos-duration="1000">
+    <div class="p-6 md:p-8 bg-zinc-950/80 border border-yellow-500/30 rounded-md relative overflow-hidden shadow-[0_0_30px_rgba(234,179,8,0.08)]">
+      <!-- Ambient Glow Emas & Cyan -->
+      <div class="absolute -top-12 -right-12 w-48 h-48 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
+        <!-- Info Giveaway -->
+        <div class="text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 font-tech text-[10px] font-bold uppercase tracking-widest rounded-sm mb-3">
+            <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
+            WEEKLY GIVEAWAY ACTIVE
+          </div>
+          <h3 class="font-gaming text-2xl md:text-3xl font-black text-white uppercase tracking-wide mb-2">
+            TOTAL HADIAH <span class="text-yellow-400">1.000 ROBUX</span>
+          </h3>
+          <p class="text-zinc-400 text-xs md:text-sm max-w-md leading-relaxed">
+            Diundi setiap minggu khusus member yang rajin hadir & absen di invitation Discord GMGTeam!
+          </p>
+        </div>
+
+        <!-- Hitung Mundur (Countdown Timer HUD) -->
+        <div class="flex flex-col items-center">
+          <span class="text-[10px] font-tech text-cyan-400 uppercase tracking-widest mb-2">// PENGUNDIAN BERIKUTNYA</span>
+          <div class="flex items-center gap-2 sm:gap-3 font-gaming text-center">
+            <div class="bg-zinc-900 border border-zinc-800 px-3 py-2 rounded min-w-[55px]">
+              <span id="cd-days" class="block text-xl md:text-2xl font-black text-white">00</span>
+              <span class="text-[9px] font-tech text-zinc-500 uppercase">HARI</span>
+            </div>
+            <span class="text-yellow-400 font-bold text-xl">:</span>
+            <div class="bg-zinc-900 border border-zinc-800 px-3 py-2 rounded min-w-[55px]">
+              <span id="cd-hours" class="block text-xl md:text-2xl font-black text-white">00</span>
+              <span class="text-[9px] font-tech text-zinc-500 uppercase">JAM</span>
+            </div>
+            <span class="text-yellow-400 font-bold text-xl">:</span>
+            <div class="bg-zinc-900 border border-zinc-800 px-3 py-2 rounded min-w-[55px]">
+              <span id="cd-minutes" class="block text-xl md:text-2xl font-black text-white">00</span>
+              <span class="text-[9px] font-tech text-zinc-500 uppercase">MENIT</span>
+            </div>
+            <span class="text-yellow-400 font-bold text-xl">:</span>
+            <div class="bg-zinc-900 border border-zinc-800 px-3 py-2 rounded min-w-[55px]">
+              <span id="cd-seconds" class="block text-xl md:text-2xl font-black text-cyan-400">00</span>
+              <span class="text-[9px] font-tech text-zinc-500 uppercase">DETIK</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tombol Aksi -->
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-2.5 w-full lg:w-auto">
+          <button onclick="openGiveawayModal()" class="px-6 py-3 bg-yellow-500 text-black font-gaming font-extrabold text-xs uppercase tracking-wider hover:bg-yellow-400 transition-all rounded-sm shadow-[0_0_15px_rgba(234,179,8,0.3)] cursor-pointer text-center">
+            📜 BACA S&K / IKUTAN
+          </button>
+          <a href="https://discord.gg/u7vfwQmcB6" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 bg-zinc-900 border border-zinc-800 text-zinc-300 font-tech font-bold text-[10px] uppercase tracking-widest hover:text-white hover:border-zinc-700 transition-all rounded-sm text-center">
+            ABSEN DI DISCORD &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTAINER DINAMIS GALERI & KALENDER -->
   <div id="galeri-container" data-aos="fade-up" data-aos-duration="1000"></div>
   <div id="kalender-container" data-aos="fade-up" data-aos-duration="1000"></div>
 
@@ -278,10 +340,10 @@
     </div>
   </section>
 
-  <!-- MODALS -->
+  <!-- MODAL MAP -->
   <div id="mapModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden transition-opacity duration-300">
     <div class="bg-zinc-950 border border-zinc-800 p-6 md:p-8 max-w-md w-full relative rounded-md shadow-2xl">
-      <button onclick="closeMapModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white transition-colors p-1">✕</button>
+      <button onclick="closeMapModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white transition-colors p-1" aria-label="Close modal">✕</button>
       <h3 class="font-gaming text-xl font-black text-white uppercase mb-2">GMG DISTRICT WORLD</h3>
       <p class="text-zinc-500 text-xs mb-6">Pilih tautan untuk langsung berkunjung atau salin link-nya secara instan.</p>
       
@@ -309,9 +371,10 @@
     </div>
   </div>
 
+  <!-- MODAL KATALOG STORE -->
   <div id="catalogModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden transition-opacity duration-300">
     <div class="bg-zinc-950 border border-zinc-800 p-6 md:p-8 max-w-md w-full relative rounded-md shadow-2xl">
-      <button onclick="closeCatalogModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white transition-colors p-1">✕</button>
+      <button onclick="closeCatalogModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white transition-colors p-1" aria-label="Close modal">✕</button>
       <h3 class="font-gaming text-xl font-black text-white uppercase mb-2">GMG STORE COLLECTION</h3>
       <p class="text-zinc-500 text-xs mb-6">Pilih outfit resmi atau salin link katalognya ke clipboard.</p>
       
@@ -349,17 +412,61 @@
     </div>
   </div>
 
+  <!-- MODAL GIVEAWAY S&K -->
+  <div id="giveawayModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden transition-opacity duration-300">
+    <div class="bg-zinc-950 border border-yellow-500/40 p-6 md:p-8 max-w-lg w-full relative rounded-md shadow-[0_0_40px_rgba(234,179,8,0.15)]">
+      <button onclick="closeGiveawayModal()" class="absolute top-4 right-4 text-zinc-500 hover:text-white transition-colors p-1" aria-label="Close modal">✕</button>
+      
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-xl">🎉</span>
+        <h3 class="font-gaming text-xl font-black text-white uppercase tracking-wide">UNDIAN BERHADIAH MINGGUAN</h3>
+      </div>
+      <p class="text-yellow-400 font-tech text-xs font-bold uppercase tracking-widest mb-6">// TOTAL HADIAH: 1.000 ROBUX / MINGGU</p>
+      
+      <div class="space-y-4 text-xs md:text-sm text-zinc-300 mb-8 leading-relaxed">
+        <div class="p-3 bg-zinc-900/80 border-l-2 border-yellow-400 rounded-r">
+          <span class="font-bold text-white block mb-1">1. WAJIB ABSEN MINGGUAN</span>
+          Wajib absen selama 1 (satu) minggu penuh tanpa melewatkan satu kali pun di channel absen Discord GMGTeam.
+        </div>
+        
+        <div class="p-3 bg-zinc-900/80 border-l-2 border-cyan-400 rounded-r">
+          <span class="font-bold text-white block mb-1">2. PENGUNDIAN LIVE DI MAP</span>
+          Pengundian dilakukan secara langsung di map Roblox GMG dan wajib diikuti oleh member yang telah memenuhi syarat absen.
+        </div>
+        
+        <div class="p-3 bg-zinc-900/80 border-l-2 border-emerald-400 rounded-r">
+          <span class="font-bold text-white block mb-1">3. PEMENANG ROBUX</span>
+          Akan dipilih 1–2 orang pemenang beruntung setiap minggunya untuk membawa pulang total 1.000 Robux!
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 font-gaming text-xs">
+        <a href="https://discord.gg/u7vfwQmcB6" target="_blank" rel="noopener noreferrer" class="flex-1 p-3.5 bg-yellow-500 text-black font-extrabold uppercase hover:bg-yellow-400 transition-colors text-center rounded-sm">
+          🚀 ABSEN SEKARANG DI DISCORD
+        </a>
+        <button onclick="closeGiveawayModal()" class="px-5 p-3.5 bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800 uppercase font-bold transition-colors rounded-sm cursor-pointer">
+          TUTUP
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer class="border-t border-zinc-950 bg-black/80 py-8 text-center text-xs text-zinc-600 font-tech">
     &copy; 2026 GMG TEAM ROBLOX. ALL RIGHTS RESERVED.
   </footer>
 
-  <button id="backToTop" class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-black border border-white/20 text-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 hover:border-cyan-500 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)] group overflow-hidden rounded-sm" onclick="scrollToTop()">
+  <!-- TOMBOL BACK TO TOP (RADAR STYLE) -->
+  <button id="backToTop" class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-black border border-white/20 text-white flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 hover:border-cyan-500 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)] group overflow-hidden rounded-sm" onclick="scrollToTop()" aria-label="Back to top">
     <div class="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent h-full w-full -translate-y-full group-hover:animate-[radar-scan_1.5s_linear_infinite]"></div>
     <svg class="w-5 h-5 relative z-10 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
   </button>
 
+  <!-- External JS Libraries -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  
+  <!-- Main Script Logic -->
   <script src="script.js"></script>
 </body>
 </html>
