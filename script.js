@@ -53,19 +53,41 @@
 })();
 
 // ==========================================
-// 2. COUNTDOWN TIMER GIVEAWAY (SETIAP MINGGU 20:00 WIB)
+// COUNTDOWN TIMER GIVEAWAY (SETIAP MINGGU 21:00 - 00:00 WIB)
 // ==========================================
 function updateGiveawayCountdown() {
   const now = new Date();
   
+  // 1. Cari tanggal hari Minggu terdekat
   let nextDraw = new Date();
-  nextDraw.setDate(now.getDate() + ((7 - now.getDay()) % 7));
-  nextDraw.setHours(20, 0, 0, 0);
+  const dayOfWeek = now.getDay(); // 0 = Minggu, 1 = Senin, dst.
+  const daysUntilSunday = (7 - dayOfWeek) % 7;
 
-  if (now > nextDraw) {
-    nextDraw.setDate(nextDraw.getDate() + 7);
+  nextDraw.setDate(now.getDate() + daysUntilSunday);
+  nextDraw.setHours(21, 0, 0, 0); // Target Mulai: Jam 21:00:00 WIB
+
+  // Target Selesai: Minggu jam 21:00 + 3 jam = 00:00 WIB (Senin Dini Hari)
+  const drawEnd = new Date(nextDraw.getTime() + (3 * 60 * 60 * 1000));
+
+  const labelEl = document.querySelector('#giveaway-section .font-tech');
+
+  // 2. Jika SEDANG BERLANGSUNG (Minggu jam 21:00 s/d 00:00 WIB)
+  if (now >= nextDraw && now < drawEnd) {
+    if (labelEl) labelEl.innerText = '// SEDANG BERLANGSUNG / LIVE!';
+    
+    document.getElementById('cd-days').innerText = '00';
+    document.getElementById('cd-hours').innerText = '00';
+    document.getElementById('cd-minutes').innerText = '00';
+    document.getElementById('cd-seconds').innerText = '00';
+    return;
   }
 
+  // Reset label jika status LIVE telah selesai
+  if (labelEl && labelEl.innerText.includes('LIVE')) {
+    labelEl.innerText = '// PENGUNDIAN BERIKUTNYA';
+  }
+
+  // 3. Hitung sisa waktu mundur menuju Minggu jam 21:00 WIB
   const diff = nextDraw - now;
 
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -84,6 +106,7 @@ function updateGiveawayCountdown() {
   if (sEl) sEl.innerText = seconds < 10 ? '0' + seconds : seconds;
 }
 
+// Jalankan timer tiap 1 detik
 setInterval(updateGiveawayCountdown, 1000);
 updateGiveawayCountdown();
 
